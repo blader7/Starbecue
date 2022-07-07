@@ -103,14 +103,17 @@
 			}
 		},
 		"defaultSettings" : {
-				"trappedTF" : true
+			"grabTF" : true
 		},
 		"allowedModifiers": {
 			"escapeDifficulty": {"min": -100, "max": 100}
 		},
 
+		"listLocations" : [
+			"grab"
+		],
 		"locations" :{
-			"grab" : { "name" : "Grabbed!", "max": 1, "transformGroups" : ["bodybob"],
+			"grab" : { "name" : "Grab", "max": 1, "transformGroups" : ["bodybob"],
 				"TF" : {
 					"toolTip" : "People that are grabbed will be wrapped up into mummies!",
 					// "icon" : "/imagePathHere.png"

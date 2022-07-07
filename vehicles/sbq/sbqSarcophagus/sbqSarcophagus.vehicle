@@ -104,7 +104,9 @@
 		"allowedModifiers": {
 			"escapeDifficulty": {"min": -100, "max": 100}
 		},
-
+		"listLocations" : [
+			"trapped"
+		],
 		"locations" :{
 			"trapped" : { "name" : "Trap!", "max": 1,
 				"TF" : {

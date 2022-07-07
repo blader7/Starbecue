@@ -107,7 +107,7 @@ function sbq.smolPreyAnimationPaths(settings, species, state, newTags)
 	local directory = "/vehicles/sbq/"..species.."/"
 	local animatedParts = root.assetJson( "/vehicles/sbq/"..species.."/"..species..".animation" ).animatedParts
 	local vehicle = root.assetJson( "/vehicles/sbq/"..species.."/"..species..".vehicle" )
-	local edibleAnims = vehicle.states[state].edibleAnims or {}
+	local edibleAnims = (vehicle.states[state] or {}).edibleAnims or {}
 	local tags = { global = root.assetJson("/vehicles/sbq/" .. species .. "/" .. species .. ".animation").globalTagDefaults or {} }
 	for part, skin in pairs(settings.skinNames or {}) do
 		tags.global[part .. "Skin"] = skin
@@ -254,7 +254,7 @@ function sbq.transformPrey(i)
 end
 
 function sbq.doTransformPrey(i, settings, smolPreyData)
-	smolPreyData = sb.jsonMerge(smolPreyData, sbq.getSmolPreyData(settings, smolPreyData.species, "smol"))
+	smolPreyData = sb.jsonMerge(smolPreyData, sbq.getSmolPreyData(settings, smolPreyData.species, smolPreyData.state or "smol"))
 	if sbq.occupant[i].species == "sbqEgg" then
 		sbq.occupant[i].smolPreyData.layer = smolPreyData
 	else

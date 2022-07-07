@@ -8,11 +8,9 @@ state = {
 function sbq.wrappingframe()
 	local victim = sbq.findFirstOccupantIdForLocation("grab")
 	if victim ~= nil then
+		sbq.doAnim("wrappingState", "wrapping")
 		local progressbar = sbq.lounging[victim].progressBar / 100
 		local frame = math.floor(progressbar * sbq.animStateData.wrappingState.states.wrapping.frames) + 1
-		sb.logInfo(progressbar)
-		sb.logInfo(sbq.animStateData.wrappingState.states.wrapping.frames)
-		sb.logInfo(frame)
 
 		sbq.setPartTag("global", "wrappingFrame", frame )
 	else
