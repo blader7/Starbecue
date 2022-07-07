@@ -27,13 +27,3 @@ function state.sarcophagus.escape(args, tconfig)
 		end)
 	end
 end
-
-function sbq.otherLocationEffects(i, eid, health, bellyEffect, location )
-	if (sbq.occupant[i].progressBar <= 0) and sbq.settings.trappedTF then
-		sbq.loopedMessage("TF"..eid, eid, "sbqIsPreyEnabled", {"transformImmunity"}, function (immune)
-			if not immune then
-				transformMessageHandler( eid , 3, { species = "sbqMummy", state = "stand" } )
-			end
-		end)
-	end
-end

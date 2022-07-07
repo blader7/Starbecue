@@ -38,6 +38,7 @@
 
 	"scriptStorage" : {
 		"vehicle" : {
+			"position" : [0,2],
 			"type" : "sbqSarcophagus"
 		}
 	},

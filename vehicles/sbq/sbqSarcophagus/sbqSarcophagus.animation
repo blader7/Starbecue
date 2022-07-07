@@ -6,7 +6,8 @@
 		"frame" : "1",
 		"directives" : "",
 		"statusDirectives" : "",
-		"smolpath": ""
+		"smolpath": "",
+		"partVisible" : ""
 	},
 	"animatedParts": {
 		"stateTypes": {
@@ -22,8 +23,8 @@
 				"states": {
 					"idle": { "frames": 1, "cycle": 3, "mode": "end", "priority": 0 },
 
-					"open": { "frames": 3, "cycle": 3, "mode": "end", "priority": 1, "baseAnim" : "idle" },
-					"close": { "frames": 3, "cycle": 3, "mode": "end", "priority": 1, "baseAnim" : "idle" },
+					"open": { "frames": 3, "cycle": 1.5, "mode": "end", "priority": 1, "baseAnim" : "idle" },
+					"close": { "frames": 3, "cycle": 1.5, "mode": "end", "priority": 1, "baseAnim" : "idle" },
 
 					"opened": { "frames": 1, "cycle": 3, "mode": "end", "priority": 0 },
 

@@ -1,0 +1,505 @@
+[16:33:25.390] [Info] Root: Preparing Root...
+[16:33:25.391] [Info] Root: Done preparing Root.
+[16:33:25.391] [Info] Client Version 1.4.4 (windows x86_64) Source ID: 8cbe6faf22282659828a194e06a08999f213769e Protocol: 747
+[16:33:25.391] [Info] Root: Scanning for asset sources in directory '..\assets\'
+[16:33:25.617] [Info] Root: Scanning for asset sources in directory '..\mods\'
+[16:33:25.656] [Warn] Root: Unrecognized file in asset directory 'mods_go_here', skipping
+[16:33:25.662] [Info] Root: Detected asset source named 'base' at '..\assets\packed.pak'
+[16:33:25.662] [Info] Root: Detected asset source named 'starboundSpeciesAnimOverrides' at '..\mods\starboundSpeciesAnimOverrides_v0.1.2.pak'
+[16:33:25.662] [Info] Root: Detected asset source named 'Starbecue' at '..\mods\Starbecue'
+[16:33:25.662] [Info] Root: Detected unnamed asset source at '..\assets\user'
+[16:33:25.662] [Info] Loading assets from: '..\assets\packed.pak'
+[16:33:25.947] [Info] Loading assets from: '..\mods\starboundSpeciesAnimOverrides_v0.1.2.pak'
+[16:33:25.954] [Info] Loading assets from: '..\mods\Starbecue'
+[16:33:26.030] [Info] Loading assets from: '..\assets\user'
+[16:33:26.570] [Info] Assets digest is 7d8ab5c8074660130bb23f6026678187bb5b6a3f26b5d1e626bad6f596224835
+[16:33:26.570] [Info] Root: Loaded Assets in 1.17914 seconds
+[16:33:26.571] [Info] Application: Initializing SDL Video
+[16:33:26.575] [Info] Application: Initializing SDL Joystick
+[16:33:26.593] [Info] Application: Initializing SDL Sound
+[16:33:26.669] [Info] Initialized Steam platform services
+[16:33:26.672] [Info] Initialized Discord platform services
+[16:33:26.681] [Info] Application: Creating SDL Window
+[16:33:26.805] [Info] Application: Enabling VSync with late swap tearing
+[16:33:26.831] [Info] Application: Opened default audio device with 44.1khz / 16 bit stereo audio, 2048 sample size buffer
+[16:33:26.837] [Info] OpenGL version: '4.6.0 NVIDIA 516.59' vendor: 'NVIDIA Corporation' renderer: 'NVIDIA GeForce RTX 2070 SUPER/PCIe/SSE2' shader: '4.60 NVIDIA'
+[16:33:26.838] [Info] Application: initialization...
+[16:33:26.839] [Info] Root: Loaded Configuration in 0.0005673 seconds
+[16:33:26.842] [Info] Application: renderer initialization...
+[16:33:26.843] [Info] detected supported OpenGL texture size 32768, using atlasNumCells 128
+[16:33:26.843] [Info] Root: Loaded ImageMetadataDatabase in 9.00007e-07 seconds
+[16:33:26.845] [Info] Application: main update loop...
+[16:33:26.848] [Info] Loading mods from user generated content with id '729524482' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729524482'
+[16:33:26.849] [Info] Loading mods from user generated content with id '729746228' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729746228'
+[16:33:26.849] [Info] Loading mods from user generated content with id '729492703' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729492703'
+[16:33:26.849] [Info] Loading mods from user generated content with id '731354142' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\731354142'
+[16:33:26.849] [Info] Loading mods from user generated content with id '729428991' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729428991'
+[16:33:26.849] [Info] Loading mods from user generated content with id '2018529786' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\2018529786'
+[16:33:26.849] [Info] Loading mods from user generated content with id '2159479065' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\2159479065'
+[16:33:26.849] [Info] Loading mods from user generated content with id '1433991809' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1433991809'
+[16:33:26.849] [Info] Loading mods from user generated content with id '869900472' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\869900472'
+[16:33:26.849] [Info] Loading mods from user generated content with id '732277574' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\732277574'
+[16:33:26.849] [Info] Loading mods from user generated content with id '730378641' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\730378641'
+[16:33:26.850] [Info] Loading mods from user generated content with id '731058758' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\731058758'
+[16:33:26.850] [Info] Loading mods from user generated content with id '729426797' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729426797'
+[16:33:26.850] [Info] Loading mods from user generated content with id '729427264' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729427264'
+[16:33:26.850] [Info] Loading mods from user generated content with id '729427436' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729427436'
+[16:33:26.850] [Info] Loading mods from user generated content with id '731220462' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\731220462'
+[16:33:26.850] [Info] Loading mods from user generated content with id '733665104' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\733665104'
+[16:33:26.850] [Info] Loading mods from user generated content with id '734599137' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\734599137'
+[16:33:26.850] [Info] Loading mods from user generated content with id '739437569' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\739437569'
+[16:33:26.850] [Info] Loading mods from user generated content with id '770083792' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\770083792'
+[16:33:26.850] [Info] Loading mods from user generated content with id '898712767' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\898712767'
+[16:33:26.850] [Info] Loading mods from user generated content with id '1115920474' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1115920474'
+[16:33:26.850] [Info] Loading mods from user generated content with id '1177433563' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1177433563'
+[16:33:26.850] [Info] Loading mods from user generated content with id '1253782150' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1253782150'
+[16:33:26.850] [Info] Loading mods from user generated content with id '1264107917' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1264107917'
+[16:33:26.851] [Info] Loading mods from user generated content with id '1543219534' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1543219534'
+[16:33:26.851] [Info] Loading mods from user generated content with id '1636662922' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1636662922'
+[16:33:26.851] [Info] Loading mods from user generated content with id '1878418833' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1878418833'
+[16:33:26.851] [Info] Loading mods from user generated content with id '729426722' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729426722'
+[16:33:26.851] [Info] Loading mods from user generated content with id '885877773' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\885877773'
+[16:33:26.851] [Info] Loading mods from user generated content with id '850109963' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\850109963'
+[16:33:26.851] [Info] Loading mods from user generated content with id '741400551' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\741400551'
+[16:33:26.851] [Info] Loading mods from user generated content with id '2359135864' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\2359135864'
+[16:33:26.851] [Info] Loading mods from user generated content with id '729558042' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729558042'
+[16:33:26.851] [Info] Loading mods from user generated content with id '1390490083' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1390490083'
+[16:33:26.851] [Info] Loading mods from user generated content with id '729754278' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729754278'
+[16:33:26.851] [Info] Loading mods from user generated content with id '2643364844' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\2643364844'
+[16:33:26.851] [Info] Loading mods from user generated content with id '764887546' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\764887546'
+[16:33:26.851] [Info] Loading mods from user generated content with id '2442860690' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\2442860690'
+[16:33:26.851] [Info] Loading mods from user generated content with id '2442873217' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\2442873217'
+[16:33:26.851] [Info] Loading mods from user generated content with id '819063903' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\819063903'
+[16:33:26.852] [Info] Loading mods from user generated content with id '2442880727' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\2442880727'
+[16:33:26.852] [Info] Loading mods from user generated content with id '729480149' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729480149'
+[16:33:26.852] [Info] Loading mods from user generated content with id '1958993491' from directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1958993491'
+[16:33:26.852] [Info] Reloading to include all user generated content
+[16:33:26.852] [Info] Root: Reloading from disk
+[16:33:26.852] [Info] Root: Writing runtime configuration to '..\storage\starbound.config'
+[16:33:26.902] [Info] Root: Loaded Configuration in 0.0005908 seconds
+[16:33:26.902] [Info] Root: Scanning for asset sources in directory '..\assets\'
+[16:33:27.125] [Info] Root: Scanning for asset sources in directory '..\mods\'
+[16:33:27.161] [Warn] Root: Unrecognized file in asset directory 'mods_go_here', skipping
+[16:33:27.167] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729524482'
+[16:33:27.167] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729746228'
+[16:33:27.167] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729492703'
+[16:33:27.168] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\731354142'
+[16:33:27.169] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729428991'
+[16:33:27.171] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\2018529786'
+[16:33:27.179] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\2159479065'
+[16:33:27.180] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1433991809'
+[16:33:27.180] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\869900472'
+[16:33:27.180] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\732277574'
+[16:33:27.181] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\730378641'
+[16:33:27.181] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\731058758'
+[16:33:27.225] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729426797'
+[16:33:27.226] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729427264'
+[16:33:27.226] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729427436'
+[16:33:27.228] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\731220462'
+[16:33:27.259] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\733665104'
+[16:33:27.260] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\734599137'
+[16:33:27.268] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\739437569'
+[16:33:27.275] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\770083792'
+[16:33:27.277] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\898712767'
+[16:33:27.292] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1115920474'
+[16:33:27.343] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1177433563'
+[16:33:27.344] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1253782150'
+[16:33:27.344] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1264107917'
+[16:33:27.347] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1543219534'
+[16:33:27.350] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1636662922'
+[16:33:27.354] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1878418833'
+[16:33:27.363] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729426722'
+[16:33:27.363] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\885877773'
+[16:33:27.365] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\850109963'
+[16:33:27.448] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\741400551'
+[16:33:27.449] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\2359135864'
+[16:33:27.506] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729558042'
+[16:33:27.528] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1390490083'
+[16:33:27.530] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729754278'
+[16:33:27.531] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\2643364844'
+[16:33:27.531] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\764887546'
+[16:33:27.533] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\2442860690'
+[16:33:27.533] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\2442873217'
+[16:33:27.533] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\819063903'
+[16:33:27.534] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\2442880727'
+[16:33:27.534] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\729480149'
+[16:33:27.960] [Info] Root: Scanning for asset sources in directory 'D:\Daniel\Steam\steamapps\workshop\content\211820\1958993491'
+[16:33:27.978] [Info] Root: Detected asset source named 'base' at '..\assets\packed.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'DoNotAddToIncludesOrRequiresStarboundPatchProject' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\1543219534\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'monstercompatcore' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\2442860690\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'StardustLib' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\764887546\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'xbawks' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\729426722\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'SpawnableItemPack' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\733665104\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Avali' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\729558042\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'starboundSpeciesAnimOverrides' at '..\mods\starboundSpeciesAnimOverrides_v0.1.2.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'ContainerUITweak' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\729524482\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Disabled drop for Survival Mode' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\729746228\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Elithian_Races_Mod' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\850109963\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Hive Wasp Race' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\770083792\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Kemono' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\739437569\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Vash'Knaaren Race' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\2018529786\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'FrackinUniverse' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\729480149\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'FrackinMusic' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\729492703\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Extended GUI' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\729426797\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Improved Food Descriptions' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\731354142\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Futara's Dragon Race' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\1958993491\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'FutaraFUAdditions' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\2159479065\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'elithianperennialcrops' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\1433991809\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'PerennialCrops' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\730378641\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'AvaliPerennialCrops' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\869900472\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'PerennialCrops_FU_Edition' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\732277574\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Extended Songbook' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\729427264\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Avali Objects+' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\898712767\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Enhanced Storage' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\731220462\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Dark Souls Armor & Weapons' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\734599137\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Avali Plus' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\1636662922\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'noearthquakes' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\1177433563\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'playerdancing' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\1253782150\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'architectsDesk' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\1878418833\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Parallax Compression' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\885877773\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'No Annoying Weather' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\741400551\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'morenpcships' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\1390490083\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Undertale Music Pack' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\729754278\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Starbecue' at '..\mods\Starbecue'
+[16:33:27.978] [Info] Root: Detected asset source named 'kit_npcmonsterfalldamage' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\819063903\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'fu_monstercore' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\2442880727\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Ore Plants+ (RAMs version)' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\731058758\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'XS_Mechs' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\729428991\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'FrackinInterface' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\1264107917\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'food_stack' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\729427436\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'Arcana' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\2359135864\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'NPC Controller' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\2643364844\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'monstercompatloader' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\2442873217\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'RPG_Growth' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\1115920474\contents.pak'
+[16:33:27.978] [Info] Root: Detected asset source named 'StardustLibPost' at 'D:\Daniel\Steam\steamapps\workshop\content\211820\764887546\post.pak'
+[16:33:27.978] [Info] Root: Detected unnamed asset source at '..\assets\user'
+[16:33:27.978] [Info] Loading assets from: '..\assets\packed.pak'
+[16:33:28.258] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\1543219534\contents.pak'
+[16:33:28.262] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\2442860690\contents.pak'
+[16:33:28.262] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\764887546\contents.pak'
+[16:33:28.264] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\729426722\contents.pak'
+[16:33:28.264] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\733665104\contents.pak'
+[16:33:28.265] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\729558042\contents.pak'
+[16:33:28.296] [Info] Loading assets from: '..\mods\starboundSpeciesAnimOverrides_v0.1.2.pak'
+[16:33:28.302] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\729524482\contents.pak'
+[16:33:28.302] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\729746228\contents.pak'
+[16:33:28.302] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\850109963\contents.pak'
+[16:33:28.403] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\770083792\contents.pak'
+[16:33:28.407] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\739437569\contents.pak'
+[16:33:28.415] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\2018529786\contents.pak'
+[16:33:28.425] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\729480149\contents.pak'
+[16:33:30.149] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\729492703\contents.pak'
+[16:33:30.151] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\729426797\contents.pak'
+[16:33:30.151] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\731354142\contents.pak'
+[16:33:30.151] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\1958993491\contents.pak'
+[16:33:30.175] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\2159479065\contents.pak'
+[16:33:30.175] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\1433991809\contents.pak'
+[16:33:30.175] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\730378641\contents.pak'
+[16:33:30.176] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\869900472\contents.pak'
+[16:33:30.176] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\732277574\contents.pak'
+[16:33:30.177] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\729427264\contents.pak'
+[16:33:30.177] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\898712767\contents.pak'
+[16:33:30.199] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\731220462\contents.pak'
+[16:33:30.238] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\734599137\contents.pak'
+[16:33:30.248] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\1636662922\contents.pak'
+[16:33:30.253] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\1177433563\contents.pak'
+[16:33:30.253] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\1253782150\contents.pak'
+[16:33:30.253] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\1878418833\contents.pak'
+[16:33:30.264] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\885877773\contents.pak'
+[16:33:30.266] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\741400551\contents.pak'
+[16:33:30.266] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\1390490083\contents.pak'
+[16:33:30.268] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\729754278\contents.pak'
+[16:33:30.269] [Info] Loading assets from: '..\mods\Starbecue'
+[16:33:30.348] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\819063903\contents.pak'
+[16:33:30.348] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\2442880727\contents.pak'
+[16:33:30.349] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\731058758\contents.pak'
+[16:33:30.469] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\729428991\contents.pak'
+[16:33:30.472] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\1264107917\contents.pak'
+[16:33:30.475] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\729427436\contents.pak'
+[16:33:30.478] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\2359135864\contents.pak'
+[16:33:30.548] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\2643364844\contents.pak'
+[16:33:30.548] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\2442873217\contents.pak'
+[16:33:30.548] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\1115920474\contents.pak'
+[16:33:30.611] [Info] Loading assets from: 'D:\Daniel\Steam\steamapps\workshop\content\211820\764887546\post.pak'
+[16:33:30.611] [Info] Loading assets from: '..\assets\user'
+[16:33:32.716] [Info] Assets digest is 7865313809c1c461f95b0d631faa873787182b05b01c146288c3c6cd3a3cf891
+[16:33:32.716] [Info] Root: Loaded Assets in 5.81392 seconds
+[16:33:32.724] [Info] Root: Loaded NameGenerator in 0.0075149 seconds
+[16:33:32.731] [Info] Root: Loaded ImageMetadataDatabase in 1.19995e-06 seconds
+[16:33:32.789] [Info] Root: Loaded PlantDatabase in 0.0643673 seconds
+[16:33:33.212] [Info] Root: Loaded ProjectileDatabase in 0.423025 seconds
+[16:33:33.881] [Info] Root: Loaded MonsterDatabase in 0.669022 seconds
+[16:33:33.904] [Info] Root: Loaded ObjectDatabase in 1.18733 seconds
+[16:33:33.979] [Info] Root: Loaded NpcDatabase in 0.0978696 seconds
+[16:33:33.988] [Info] Root: Loaded StagehandDatabase in 0.083811 seconds
+[16:33:33.993] [Info] Root: Loaded VehicleDatabase in 0.0134632 seconds
+[16:33:34.078] [Info] Root: Loaded PlayerFactory in 0.0900132 seconds
+[16:33:34.080] [Info] Root: Loaded VersioningDatabase in 0.0012481 seconds
+[16:33:34.080] [Info] Root: Loaded EntityFactory in 0.0870513 seconds
+[16:33:34.146] [Info] Root: Loaded ParticleDatabase in 0.0659015 seconds
+[16:33:34.576] [Info] Root: Loaded MaterialDatabase in 0.496546 seconds
+[16:33:34.581] [Info] Root: Loaded TerrainDatabase in 0.005916 seconds
+[16:33:34.801] [Info] Root: Loaded BiomeDatabase in 0.219187 seconds
+[16:33:34.804] [Info] Root: Loaded LiquidsDatabase in 0.0023802 seconds
+[16:33:34.844] [Info] Root: Loaded StatusEffectDatabase in 0.0401263 seconds
+[16:33:35.343] [Info] Root: Loaded DamageDatabase in 0.499102 seconds
+[16:33:35.349] [Info] Root: Loaded EffectSourceDatabase in 0.0057094 seconds
+[16:33:35.373] [Info] Root: Loaded FunctionDatabase in 0.0240762 seconds
+[16:33:36.228] [Error] Could not load image asset '/objects/sbq/sbqSpawners/sbqSpawnerInvisible/sbqSpawnerInvisible.png', using placeholder default.
+(ImageException) File ..\mods\Starbecue\objects\sbq\sbqSpawners\sbqSpawnerInvisible\sbqSpawnerInvisible.png is not a png image!
+[16:33:36.382] [Info] Root: Loaded TreasureDatabase in 1.00936 seconds
+[16:33:36.909] [Info] Root: Loaded DungeonDefinitions in 0.526945 seconds
+[16:33:36.909] [Info] Root: Loaded TilesetDatabase in 1.79e-05 seconds
+[16:33:36.910] [Info] Root: Loaded StatisticsDatabase in 0.0009883 seconds
+[16:33:36.910] [Info] Root: Loaded EmoteProcessor in 4.76e-05 seconds
+[16:33:36.959] [Info] Root: Loaded SpeciesDatabase in 0.0480018 seconds
+[16:33:36.985] [Info] Root: Loaded QuestTemplateDatabase in 0.026085 seconds
+[16:33:36.987] [Info] Root: Loaded AiDatabase in 0.0019717 seconds
+[16:33:36.993] [Info] Root: Loaded TechDatabase in 0.0056983 seconds
+[16:33:37.007] [Info] Root: Loaded CodexDatabase in 0.0145945 seconds
+[16:33:38.890] [Error] Could not load recipe /recipes/oreseedconverter/lazuliteoret4seed.recipe: (ItemException) No such item 'lazuliteore'
+[16:33:38.967] [Error] Could not load recipe /recipes/oreseedconverter/berliniteoret3seed.recipe: (ItemException) No such item 'berliniteore'
+[16:33:39.836] [Error] Could not load recipe /recipes/oreseedmachine/gardenbotv80gspawnerseed.recipe: (ItemException) No such item 'gardenbotv80gspawner'
+[16:33:40.159] [Error] Could not load recipe /recipes/oreseedmachine/humanrainmaker2000seed.recipe: (ItemException) No such item 'humanrainmaker2000'
+[16:33:40.450] [Info] Root: Loaded BehaviorDatabase in 3.44321 seconds
+[16:33:40.453] [Info] Root: Loaded DanceDatabase in 0.0025507 seconds
+[16:33:40.460] [Info] Root: Loaded SpawnTypeDatabase in 0.0072269 seconds
+[16:33:40.494] [Info] Root: Loaded RadioMessageDatabase in 0.0338115 seconds
+[16:33:40.633] [Error] Could not load recipe /recipes/oreseedmachine/hylotlrainmaker2000seed.recipe: (ItemException) No such item 'hylotlrainmaker2000'
+[16:33:40.640] [Error] Could not load recipe /recipes/oreseedmachine/gardenbotv86gspawnerseed.recipe: (ItemException) No such item 'gardenbotv86gspawner'
+[16:33:40.675] [Error] Could not load recipe /recipes/oreseedmachine/novakidrainmaker2000seed.recipe: (ItemException) No such item 'novakidrainmaker2000'
+[16:33:40.896] [Error] Could not load recipe /recipes/oreseedconverter/lazuliteoret1seed.recipe: (ItemException) No such item 'lazuliteore'
+[16:33:40.919] [Error] Could not load recipe /recipes/oreseedconverter/berliniteoret4seed.recipe: (ItemException) No such item 'berliniteore'
+[16:33:40.992] [Error] Could not load recipe /recipes/oreseedmachine/gardenbotv49rspawnerseed.recipe: (ItemException) No such item 'gardenbotv49rspawner'
+[16:33:41.918] [Error] Could not load image asset '/objects/addons/fu_liquidhoneyred/fu_liquidhoneyredt4seedicon.png', using placeholder default.
+(AssetException) No such asset '/objects/addons/fu_liquidhoneyred/fu_liquidhoneyredt4seedicon.png'
+[16:33:42.012] [Error] Could not load recipe /recipes/oreseedmachine/apexrainmaker2000seed.recipe: (ItemException) No such item 'apexrainmaker2000'
+[16:33:42.441] [Error] Could not load recipe /recipes/oreseedmachine/glitchrainmaker2000seed.recipe: (ItemException) No such item 'glitchrainmaker2000'
+[16:33:42.524] [Error] Could not load recipe /recipes/oreseedmachine/gardenbotv82gspawnerseed.recipe: (ItemException) No such item 'gardenbotv82gspawner'
+[16:33:42.637] [Error] Could not load recipe /recipes/oreseedconverter/lazuliteoret2seed.recipe: (ItemException) No such item 'lazuliteore'
+[16:33:42.700] [Error] Could not load recipe /recipes/oreseedconverter/berliniteoret1seed.recipe: (ItemException) No such item 'berliniteore'
+[16:33:42.933] [Error] Could not load recipe /recipes/oreseedmachine/berliniteoreseed.recipe: (ItemException) No such item 'berliniteore'
+[16:33:43.916] [Error] Could not load recipe /recipes/oreseedmachine/lazuliteoreseed.recipe: (ItemException) No such item 'lazuliteore'
+[16:33:44.205] [Error] Could not load recipe /recipes/oreseedmachine/avianrainmaker2000seed.recipe: (ItemException) No such item 'avianrainmaker2000'
+[16:33:44.490] [Error] Could not load recipe /recipes/oreseedconverter/lazuliteoret3seed.recipe: (ItemException) No such item 'lazuliteore'
+[16:33:44.574] [Error] Could not load recipe /recipes/oreseedconverter/berliniteoret2seed.recipe: (ItemException) No such item 'berliniteore'
+[16:33:44.677] [Error] Could not load recipe /recipes/weapons/oldtier/broadsword/odb2tier2broadsword_c2.recipe: (ItemException) No such item 'steelbar'
+[16:33:44.847] [Error] Could not load recipe /recipes/oreseedmachine/floranrainmaker2000seed.recipe: (ItemException) No such item 'floranrainmaker2000'
+[16:33:44.920] [Error] Could not load recipe /recipes/oreseedmachine/gardenbotv81gspawnerseed.recipe: (ItemException) No such item 'gardenbotv81gspawner'
+[16:33:45.102] [Error] Could not load recipe /recipes/oreseedmachine/avalirainmaker2000seed.recipe: (ItemException) No such item 'avalirainmaker2000'
+[16:33:45.616] [Error] Could not load recipe /recipes/oreseedmachine/gardenbotv87gspawnerseed.recipe: (ItemException) No such item 'gardenbotv87gspawner'
+[16:33:51.352] [Info] Root: Loaded ItemDatabase in 17.2731 seconds
+[16:33:51.674] [Info] Root: Loaded CollectionDatabase in 11.18 seconds
+[16:33:52.338] [Error] Could not instantiate item '[sbqSpawnerInvisible, 2, {"scriptStorage":{}}]'. (ImageException) File ..\mods\Starbecue\objects\sbq\sbqSpawners\sbqSpawnerInvisible\sbqSpawnerInvisible.png is not a png image!
+[16:33:52.638] [Info] detected supported OpenGL texture size 32768, using atlasNumCells 256
+[16:33:54.991] [Error] Could not instantiate item '[sbqSpawnerInvisible, 2, {"scriptStorage":{}}]'. (ImageException) File ..\mods\Starbecue\objects\sbq\sbqSpawners\sbqSpawnerInvisible\sbqSpawnerInvisible.png is not a png image!
+[16:33:57.512] [Info] UniverseServer: Acquiring universe lock file
+[16:33:57.513] [Info] UniverseServer: Loading settings
+[16:33:57.515] [Info] UniverseServer: Starting UniverseServer with UUID: b4cf38757ac3b84697dd9460ab1085ed
+[16:33:57.522] [Info] UniverseServer: Logged in player 'Torshren' locally
+[16:33:57.522] [Info] UniverseServer: Logged in account '<anonymous>' as player 'Torshren' from address local
+[16:33:57.632] [Info] UniverseServer: Loading system world (-535858558, 483988687, -96877605) from disk storage
+[16:33:57.634] [Info] UniverseClient: Joined server as client 1
+[16:33:57.675] [Info] UniverseServer: Reviving player at CelestialWorld:-535858558:483988687:-96877605:6:2
+[16:33:57.675] [Info] UniverseServer: Client 'Torshren' <1> (local) connected
+[16:33:57.722] [Info] detected supported OpenGL texture size 32768, using atlasNumCells 256
+[16:33:57.722] [Info] detected supported OpenGL texture size 32768, using atlasNumCells 256
+[16:33:57.733] [Info] UniverseServer: Loading celestial world -535858558:483988687:-96877605:6:2
+[16:33:57.743] [Info] detected supported OpenGL texture size 32768, using atlasNumCells 256
+[16:33:57.743] [Info] Setting steam rich presence connection as steamid_76561198041975210
+[16:33:57.889] [Info] Protected dungeonIds for world set to (1, 4, 65524)
+[16:33:58.139] [Info] UniverseServer: Warping player 1 to CelestialWorld:-535858558:483988687:-96877605:6:2=2764.61.667
+[16:33:58.168] [Info] Setting discord join secret as connect:discord_115948522318200836_994627342527905895_6450e49a8b826fe1
+[16:33:58.288] [Error] Could not load image asset '/ai/portraits/vashknaarenbipedquestportrait.png', using placeholder default.
+(AssetException) No such asset '/ai/portraits/vashknaarenbipedquestportrait.png'
+[16:33:58.293] [Info] ===== THEA PLAYER COMPANIONS INITIALIZATION =====
+[16:33:58.293] [Info] Initializing player companions utility script
+[16:33:58.476] [Info] ===== THEA PLAYER INITIALIZATION =====
+[16:33:58.476] [Info] Initializing general player utility script
+[16:33:58.476] [Info] Initializing Event Notification Handler
+[16:33:58.477] [Info] Initializing Random Event Handler
+[16:33:58.477] [Info] ----- FU player init -----
+[16:33:58.477] [Info] ----- End FU player init -----
+[16:33:58.477] [Info] ----- ZB player init -----
+[16:33:58.477] [Info] [ZB] Mods using update info window and their versions:
+[16:33:58.477] [Info] -- frackinuniverse   [Version 6.2.5]
+[16:33:58.477] [Info] -- ztarbound   [Version 6.2.5]
+[16:33:58.477] [Info] ----- end ZB player init -----
+[16:33:58.482] [Info] Chaika's RPG Growth: Version 1.95
+[16:33:58.620] [Error] Exception caught loading asset: /codex/vashknaarenbiped/vashknaarenbipeddiary.codex, (AssetException) Could not read JSON asset /codex/vashknaarenbiped/vashknaarenbipeddiary.codex
+[0] 7ff7af7ca213 Star::captureStack
+[1] 7ff7af7c8f9e Star::StarException::StarException
+[2] 7ff7af7c9088 Star::StarException::StarException
+[3] 7ff7af7d8920 Star::AssetException::AssetException
+[4] 7ff7b00d1fa1 `<lambda_de493f01ed04f38d948f8b3d1c9a817c>::operator()'::`1'::catch$8
+[5] 7ffbaad51030
+[6] 7ffbaad543a8 is_exception_typeof
+[7] 7ffbc6171426 RtlCaptureContext2
+[8] 7ff7af7db1c2 <lambda_de493f01ed04f38d948f8b3d1c9a817c>::operator()
+[9] 7ff7af7d863b Star::Assets::unlockDuring<<lambda_de493f01ed04f38d948f8b3d1c9a817c> >
+[10] 7ff7af7e468d Star::Assets::loadJson
+[11] 7ff7af7e37e3 Star::Assets::loadAsset
+[12] 7ff7af7df76f Star::Assets::doLoad
+[13] 7ff7af7e18ab Star::Assets::getAsset
+[14] 7ff7af7e3469 Star::Assets::json
+[15] 7ff7afe4f176 Star::LuaBindings::RootCallbacks::assetJson
+[16] 7ff7afe4269e std::_Invoker_functor::_Call<Star::Json (__cdecl*const & __ptr64)(Star::Root * __ptr64,Star::String const & __ptr64),Star::Root * __ptr64 const & __ptr64,Star::String>
+[17] 7ff7afe45456 std::invoke<Star::Json (__cdecl*const & __ptr64)(Star::Root * __ptr64,Star::String const & __ptr64),Star::Root * __ptr64 const & __ptr64,Star::String>
+[18] 7ff7afe42fe4 std::_Invoke_ret<Star::Json (__cdecl*const & __ptr64)(Star::Root * __ptr64,Star::String const & __ptr64),Star::Root * __ptr64 const & __ptr64,Star::String>
+[19] 7ff7afe42c52 std::_Call_binder<std::_Unforced,0,1,Star::Json (__cdecl*const)(Star::Root * __ptr64,Star::String const & __ptr64),std::tuple<Star::Root * __ptr64,std::_Ph<1> > const ,std::tuple<Star::String && __ptr64> >
+[20] 7ff7afe41183 std::_Binder<std::_Unforced,Star::Json (__cdecl&)(Star::Root * __ptr64,Star::String const & __ptr64),Star::Root * __ptr64 & __ptr64,std::_Ph<1> const & __ptr64>::operator()<Star::String>
+[21] 7ff7afe4aae9 <lambda_5ca9957d7a12d342a5dc67c1e70e91bc>::operator()
+[22] 7ff7afe4170f std::_Invoker_functor::_Call<<lambda_5ca9957d7a12d342a5dc67c1e70e91bc> & __ptr64,Star::LuaEngine & __ptr64,unsigned __int64,Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> * __ptr64>
+[23] 7ff7afe44bc0 std::invoke<<lambda_5ca9957d7a12d342a5dc67c1e70e91bc> & __ptr64,Star::LuaEngine & __ptr64,unsigned __int64,Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> * __ptr64>
+[24] 7ff7afe4359b std::_Invoke_ret<Star::Variant<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData>,Star::LuaVariadic<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> > >,<lambda_5ca9957d7a12d342a5dc67c1e70e91bc> & __ptr64,Star::LuaEngine & __ptr64,unsigned __int64,Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> * __ptr64>
+[25] 7ff7afe4e0ab std::_Func_impl<<lambda_5ca9957d7a12d342a5dc67c1e70e91bc>,std::allocator<int>,Star::Variant<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData>,Star::LuaVariadic<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> > >,Star::LuaEngine & __ptr64,unsigned __int64,Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> * __ptr64>::_Do_call
+[26] 7ff7af79733d std::_Func_class<Star::Variant<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData>,Star::LuaVariadic<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> > >,Star::LuaEngine & __ptr64,unsigned __int64,Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> * __ptr64>::operator()
+[27] 7ff7af7966d7 <lambda_894500e69fe9ecf0c3703bede71c72aa>::operator()
+[28] 7ff7af723158 luaD_precall
+[29] 7ff7af722c57 luaD_call
+[30] 7ff7af72343b luaD_rawrunprotected
+[31] 7ff7af722e70 luaD_pcall
+[32] 7ff7af719404 lua_pcallk
+[33] 7ff7af71d3df luaB_pcall
+[34] 7ff7af723158 luaD_precall
+[35] 7ff7af73bf01 luaV_execute
+[36] 7ff7af722c63 luaD_call
+[37] 7ff7af72343b luaD_rawrunprotected
+[38] 7ff7af722e70 luaD_pcall
+[39] 7ff7af719404 lua_pcallk
+[40] 7ff7af71d3df luaB_pcall
+[41] 7ff7af723158 luaD_precall
+[42] 7ff7af73bf01 luaV_execute
+[43] 7ff7af722c63 luaD_call
+[44] 7ff7af72343b luaD_rawrunprotected
+[45] 7ff7af722e70 luaD_pcall
+[46] 7ff7af719404 lua_pcallk
+[47] 7ff7af79e630 Star::LuaEngine::pcallWithTraceback
+[48] 7ff7af97eb8c Star::LuaEngine::callFunction<float>
+[49] 7ff7af982896 Star::LuaFunction::invoke<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData>,float>
+[50] 7ff7af9827c9 Star::LuaBaseComponent::invoke<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData>,float>
+[51] 7ff7af98a44c Star::LuaUpdatableComponent<Star::LuaWorldComponent<Star::LuaBaseComponent> >::update<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData>,float>
+[52] 7ff7afaca4cc Star::PlayerDeployment::update
+[53] 7ff7afabb4c3 Star::Player::update
+[54] 7ff7afcd3648 <lambda_9fc580ae40b93070d912cafafa15880e>::operator()
+[55] 7ff7af913846 Star::EntityMap::updateAllEntities
+[56] 7ff7afcec15b Star::WorldClient::update
+[57] 7ff7afc569bd Star::UniverseClient::update
+[58] 7ff7af715da7 Star::ClientApplication::updateRunning
+[59] 7ff7af71473d Star::ClientApplication::update
+[60] 7ff7afedd4d1 Star::SdlPlatform::run
+[61] 7ff7afedd68d Star::runMainApplication
+[62] 7ff7af717731 WinMain
+[63] 7ff7b00c07af __scrt_common_main_seh
+[64] 7ffbc5167034 BaseThreadInitThunk
+[65] 7ffbc6122651 RtlUserThreadStart
+Caused by: (AssetException) No such asset '/codex/vashknaarenbiped/vashknaarenbipeddiary.codex'
+[0] 7ff7af7ca213 Star::captureStack
+[1] 7ff7af7c8f9e Star::StarException::StarException
+[2] 7ff7af7e69c5 Star::Assets::read
+[3] 7ff7af7e6a3b Star::Assets::readJson
+[4] 7ff7af7db1c2 <lambda_de493f01ed04f38d948f8b3d1c9a817c>::operator()
+[5] 7ff7af7d863b Star::Assets::unlockDuring<<lambda_de493f01ed04f38d948f8b3d1c9a817c> >
+[6] 7ff7af7e468d Star::Assets::loadJson
+[7] 7ff7af7e37e3 Star::Assets::loadAsset
+[8] 7ff7af7df76f Star::Assets::doLoad
+[9] 7ff7af7e18ab Star::Assets::getAsset
+[10] 7ff7af7e3469 Star::Assets::json
+[11] 7ff7afe4f176 Star::LuaBindings::RootCallbacks::assetJson
+[12] 7ff7afe4269e std::_Invoker_functor::_Call<Star::Json (__cdecl*const & __ptr64)(Star::Root * __ptr64,Star::String const & __ptr64),Star::Root * __ptr64 const & __ptr64,Star::String>
+[13] 7ff7afe45456 std::invoke<Star::Json (__cdecl*const & __ptr64)(Star::Root * __ptr64,Star::String const & __ptr64),Star::Root * __ptr64 const & __ptr64,Star::String>
+[14] 7ff7afe42fe4 std::_Invoke_ret<Star::Json (__cdecl*const & __ptr64)(Star::Root * __ptr64,Star::String const & __ptr64),Star::Root * __ptr64 const & __ptr64,Star::String>
+[15] 7ff7afe42c52 std::_Call_binder<std::_Unforced,0,1,Star::Json (__cdecl*const)(Star::Root * __ptr64,Star::String const & __ptr64),std::tuple<Star::Root * __ptr64,std::_Ph<1> > const ,std::tuple<Star::String && __ptr64> >
+[16] 7ff7afe41183 std::_Binder<std::_Unforced,Star::Json (__cdecl&)(Star::Root * __ptr64,Star::String const & __ptr64),Star::Root * __ptr64 & __ptr64,std::_Ph<1> const & __ptr64>::operator()<Star::String>
+[17] 7ff7afe4aae9 <lambda_5ca9957d7a12d342a5dc67c1e70e91bc>::operator()
+[18] 7ff7afe4170f std::_Invoker_functor::_Call<<lambda_5ca9957d7a12d342a5dc67c1e70e91bc> & __ptr64,Star::LuaEngine & __ptr64,unsigned __int64,Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> * __ptr64>
+[19] 7ff7afe44bc0 std::invoke<<lambda_5ca9957d7a12d342a5dc67c1e70e91bc> & __ptr64,Star::LuaEngine & __ptr64,unsigned __int64,Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> * __ptr64>
+[20] 7ff7afe4359b std::_Invoke_ret<Star::Variant<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData>,Star::LuaVariadic<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> > >,<lambda_5ca9957d7a12d342a5dc67c1e70e91bc> & __ptr64,Star::LuaEngine & __ptr64,unsigned __int64,Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> * __ptr64>
+[21] 7ff7afe4e0ab std::_Func_impl<<lambda_5ca9957d7a12d342a5dc67c1e70e91bc>,std::allocator<int>,Star::Variant<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData>,Star::LuaVariadic<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> > >,Star::LuaEngine & __ptr64,unsigned __int64,Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> * __ptr64>::_Do_call
+[22] 7ff7af79733d std::_Func_class<Star::Variant<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData>,Star::LuaVariadic<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> > >,Star::LuaEngine & __ptr64,unsigned __int64,Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData> * __ptr64>::operator()
+[23] 7ff7af7966d7 <lambda_894500e69fe9ecf0c3703bede71c72aa>::operator()
+[24] 7ff7af723158 luaD_precall
+[25] 7ff7af722c57 luaD_call
+[26] 7ff7af72343b luaD_rawrunprotected
+[27] 7ff7af722e70 luaD_pcall
+[28] 7ff7af719404 lua_pcallk
+[29] 7ff7af71d3df luaB_pcall
+[30] 7ff7af723158 luaD_precall
+[31] 7ff7af73bf01 luaV_execute
+[32] 7ff7af722c63 luaD_call
+[33] 7ff7af72343b luaD_rawrunprotected
+[34] 7ff7af722e70 luaD_pcall
+[35] 7ff7af719404 lua_pcallk
+[36] 7ff7af71d3df luaB_pcall
+[37] 7ff7af723158 luaD_precall
+[38] 7ff7af73bf01 luaV_execute
+[39] 7ff7af722c63 luaD_call
+[40] 7ff7af72343b luaD_rawrunprotected
+[41] 7ff7af722e70 luaD_pcall
+[42] 7ff7af719404 lua_pcallk
+[43] 7ff7af79e630 Star::LuaEngine::pcallWithTraceback
+[44] 7ff7af97eb8c Star::LuaEngine::callFunction<float>
+[45] 7ff7af982896 Star::LuaFunction::invoke<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData>,float>
+[46] 7ff7af9827c9 Star::LuaBaseComponent::invoke<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData>,float>
+[47] 7ff7af98a44c Star::LuaUpdatableComponent<Star::LuaWorldComponent<Star::LuaBaseComponent> >::update<Star::Variant<Star::Empty,bool,__int64,double,Star::LuaString,Star::LuaTable,Star::LuaFunction,Star::LuaThread,Star::LuaUserData>,float>
+[48] 7ff7afaca4cc Star::PlayerDeployment::update
+[49] 7ff7afabb4c3 Star::Player::update
+[50] 7ff7afcd3648 <lambda_9fc580ae40b93070d912cafafa15880e>::operator()
+[51] 7ff7af913846 Star::EntityMap::updateAllEntities
+[52] 7ff7afcec15b Star::WorldClient::update
+[53] 7ff7afc569bd Star::UniverseClient::update
+[54] 7ff7af715da7 Star::ClientApplication::updateRunning
+[55] 7ff7af71473d Star::ClientApplication::update
+[56] 7ff7afedd4d1 Star::SdlPlatform::run
+[57] 7ff7afedd68d Star::runMainApplication
+[58] 7ff7af717731 WinMain
+[59] 7ff7b00c07af __scrt_common_main_seh
+[60] 7ffbc5167034 BaseThreadInitThunk
+[61] 7ffbc6122651 RtlUserThreadStart
+[16:33:58.622] [Warn] [XCustomCodex Systems] An item's ID ended in -codex, but it was not located as a codex in the game data files. Is this item violating standard naming conventions? Is the ID of the codex different than the file name of the codex? Aborting the learning procedure. (Attempted to locate the file [/codex/vashknaarenbiped/vashknaarenbipeddiary.codex], which doesn't exist.
+[16:35:06.938] [Error] Attempt to call invalid Anim State: bodyState.s_front
+[16:35:09.597] [Error] Attempt to call invalid Anim State: bodyState.s_front
+[16:35:12.257] [Error] Attempt to call invalid Anim State: bodyState.s_front
+[16:35:14.931] [Error] Attempt to call invalid Anim State: bodyState.s_front
+[16:35:31.645] [Error] Could not load image asset '/metagui/themes/frackin/v2/frame.png', using placeholder default.
+(AssetException) No such asset '/metagui/themes/frackin/v2/frame.png'
+[16:35:31.646] [Error] Could not load image asset '/metagui/themes/frackin/v2/panel.png', using placeholder default.
+(AssetException) No such asset '/metagui/themes/frackin/v2/panel.png'
+[16:35:31.647] [Error] Could not load image asset '/metagui/themes/frackin/v2/button.png', using placeholder default.
+(AssetException) No such asset '/metagui/themes/frackin/v2/button.png'
+[16:35:31.647] [Error] Could not load image asset '/metagui/themes/frackin/v2/scrollBar.png', using placeholder default.
+(AssetException) No such asset '/metagui/themes/frackin/v2/scrollBar.png'
+[16:35:31.648] [Error] Could not load image asset '/metagui/themes/frackin/v2/textBox.png', using placeholder default.
+(AssetException) No such asset '/metagui/themes/frackin/v2/textBox.png'
+[16:35:31.649] [Error] Could not load image asset '/metagui/themes/frackin/v2/tabPanel.png', using placeholder default.
+(AssetException) No such asset '/metagui/themes/frackin/v2/tabPanel.png'
+[16:35:31.649] [Error] Could not load image asset '/metagui/themes/frackin/v2/tab.png', using placeholder default.
+(AssetException) No such asset '/metagui/themes/frackin/v2/tab.png'
+[16:35:31.650] [Error] Could not load image asset '/metagui/themes/frackin/v2/checkBox.png', using placeholder default.
+(AssetException) No such asset '/metagui/themes/frackin/v2/checkBox.png'
+[16:35:31.650] [Error] Could not load image asset '/metagui/themes/frackin/v2/radioButton.png', using placeholder default.
+(AssetException) No such asset '/metagui/themes/frackin/v2/radioButton.png'
+[16:35:31.651] [Error] Could not load image asset '/metagui/themes/frackin/v2/itemSlot.png', using placeholder default.
+(AssetException) No such asset '/metagui/themes/frackin/v2/itemSlot.png'
+[16:35:31.651] [Error] Could not load image asset '/metagui/themes/frackin/v2/itemRarity.png', using placeholder default.
+(AssetException) No such asset '/metagui/themes/frackin/v2/itemRarity.png'
+[16:35:31.652] [Error] Could not load image asset '/metagui/themes/frackin/itemRarity.png', using placeholder default.
+(AssetException) No such asset '/metagui/themes/frackin/itemRarity.png'
+[16:35:31.653] [Error] Could not load image asset '/metagui/themes/frackin/v2/windowBg.png', using placeholder default.
+(AssetException) No such asset '/metagui/themes/frackin/v2/windowBg.png'
+[16:37:24.088] [Info] UniverseClient: Client disconnecting...
+[16:37:24.123] [Info] Client received world stop packet, leaving: Removed
+[16:37:25.472] [Info] UniverseServer: Client 'Torshren' <1> (local) disconnected for reason: 
+[16:37:25.472] [Info] UniverseServer: Reaped 1 dead connections
+[16:37:25.472] [Info] UniverseServer: Stopping idle world CelestialWorld:-535858558:483988687:-96877605:6:2
+[16:37:25.836] [Info] UniverseServer: Stopping UniverseServer
+[16:37:25.948] [Info] Clearing steam rich presence connection
+[16:37:25.948] [Info] Deleting discord server lobby 994627342527905895
+[16:37:26.138] [Error] Could not connect delete server lobby (err 0)
+[16:37:27.580] [Info] Application: quit requested
+[16:37:27.580] [Info] Application: quitting...
+[16:37:27.580] [Info] Application: shutdown...
+[16:37:27.714] [Info] Root: Shutting down Root
+[16:37:28.960] [Info] Application: Destroying SDL Window
+[16:37:28.996] [Info] Deleting discord server lobby 994627342527905895
+[16:37:28.998] [Info] Application: stopped gracefully
