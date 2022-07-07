@@ -1,4 +1,5 @@
 ---@diagnostic disable: undefined-global
+---@diagnostic disable: undefined-field
 
 local inited
 
@@ -7,17 +8,7 @@ sbq = {
 	data = {
 		settings = { personality = "default", mood = "default" },
 		defaultPortrait = "/empty_image.png",
-		icons = {
-			oralVore = "/items/active/sbqController/oralVore.png",
-			tailVore = "/items/active/sbqController/tailVore.png",
-			absorbVore = "/items/active/sbqController/absorbVore.png",
-			navelVore = "/items/active/sbqController/navelVore.png",
-
-			analVore = "/items/active/sbqController/analVore.png",
-			cockVore = "/items/active/sbqController/cockVore.png",
-			breastVore = "/items/active/sbqController/breastVore.png",
-			unbirth = "/items/active/sbqController/unbirth.png"
-		}
+		icons = {}
 	}
 }
 dialogueBoxScripts = {}
@@ -26,15 +17,27 @@ require("/scripts/SBQ_RPC_handling.lua")
 require("/lib/stardust/json.lua")
 require("/interface/scripted/sbq/sbqDialogueBox/sbqDialogueBoxScripts.lua")
 
+
 function init()
 	sbq.name = world.entityName(pane.sourceEntity())
 	nameLabel:setText(sbq.name)
 
+	local species = (metagui.inputData.settings or {}).race or world.entitySpecies(pane.sourceEntity())
+	if species then
+		for i, voreType in ipairs(sbq.config.voreTypes) do
+			local icon =  "/items/active/sbqController/"..voreType..".png".. (metagui.inputData.iconDirectives or "")
+			local success, notEmpty = pcall(root.nonEmptyRegion, ("/humanoid/" .. species .. "/voreControllerIcons/" .. voreType .. ".png"))
+			if success and notEmpty ~= nil then
+				icon = "/humanoid/" .. species .. "/voreControllerIcons/" .. voreType .. ".png" ..  (metagui.inputData.iconDirectives or "")
+			end
+			sbq.data.icons[voreType] = icon
+		end
+	end
+
 	sbq.data = sb.jsonMerge(sbq.data, metagui.inputData)
-	if sbq.data.settings.preyEnabled == nil then
+	if sbq.data.settings.playerPrey then
 		sbq.data.settings = sb.jsonMerge(sbq.data.settings, sb.jsonMerge( sbq.config.defaultPreyEnabled.player, player.getProperty("sbqPreyEnabled") or {}))
 	end
-	sbq.data.settings.race = world.entitySpecies(pane.sourceEntity())
 	for _, script in ipairs(sbq.data.dialogueBoxScripts or {}) do
 		require(script)
 	end
@@ -231,9 +234,9 @@ function sbq.checkVoreTypeActive(voreType)
 	if (sbq.data.settings[voreType.."PredEnable"] or sbq.data.settings[voreType.."Pred"]) and preyEnabled.preyEnabled and preyEnabled[voreType] and ( currentData.type ~= "prey" ) then
 		if sbq.data.settings[voreType.."Pred"] then
 			if type(sbq.data.occupantHolder) ~= "nil" and type(sbq.occupants) == "table" then
-				if currentData.type == "driver" and ((not currentData.edible) or (((sbq.occupants[locationName] + 1 + currentData.totalOccupants) > (sbq.data.settings.visualMax[locationName] or locationData.max))) and not (sbq.data.settings.hammerspace and not sbq.data.settings.hammerspaceDisabled[locationName]) ) then
+				if currentData.type == "driver" and ((not currentData.edible) or (((sbq.occupants[locationName] + 1 + currentData.totalOccupants) > (sbq.data.settings[locationName.."VisualMax"] or locationData.max))) and not (sbq.data.settings.hammerspace and not sbq.data.settings[locationName.."HammerspaceDisabled"]) ) then
 					return "tooBig", locationName, locationData
-				elseif (sbq.occupants[locationName] >= (sbq.data.settings.visualMax[locationName] or locationData.max) ) then
+				elseif (sbq.occupants[locationName] >= (sbq.data.settings[locationName.."VisualMax"] or locationData.max) ) then
 					if sbq.actualOccupants == 0 then
 						return "otherLocationFull", locationName, locationData
 					else
@@ -254,7 +257,7 @@ function sbq.checkVoreTypeActive(voreType)
 end
 
 function sbq.checkVoreButtonsEnabled()
-	for voreType, data in pairs(sbq.data.icons or {}) do
+	for i, voreType in pairs(sbq.config.voreTypes or {}) do
 		local button = _ENV[voreType]
 		local active = sbq.checkVoreTypeActive(voreType)
 		button:setVisible(active ~= "hidden")
@@ -271,7 +274,6 @@ function sbq.voreButton(voreType)
 	sbq.data.settings.voreType = voreType
 	sbq.data.settings.getVoreButtonAction = active
 	sbq.data.settings.location = locationName
-	sbq.data.settings.locationDigest = locationData.digest
 
 	if active == "request" then
 		sbq.data.settings.doingVore = "before"
@@ -412,7 +414,6 @@ end
 function navelVore:onClick()
 	sbq.voreButton("navelVore")
 end
-
 
 function analVore:onClick()
 	sbq.voreButton("analVore")

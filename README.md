@@ -4,7 +4,7 @@ To install simply visit the [releases page](https://github.com/Zygahedron/Starbe
 
 This mod Requires [Stardust Core Lite](https://steamcommunity.com/sharedfiles/filedetails/?id=2512589532) or [Stardust Core](https://steamcommunity.com/sharedfiles/filedetails/?id=764887546)
 
-Alternatively, if you want the latest and greatest changes, download this repo as a zip and extract in your starbound mods folder, or better yet, use git to clone it there so that you can update it more easily. Just be warned that things won't always be perfectly stable. And likely will also require the library [Species Anim Overrides](https://github.com/WasabiRaptor/starboundSpeciesAnimOverrides) to be installed as well.
+Alternatively, if you want the latest and greatest changes, download this repo as a zip and extract in your starbound mods folder, or better yet, use git to clone it there so that you can update it more easily. Just be warned that things won't always be perfectly stable. And likely will also require the library [Species Anim Overrides](https://github.com/WasabiRaptor/starboundSpeciesAnimOverrides) to be installed as well, be aware that when installing the mods like this, things are much more likely to be unstable! keep to the [releases page](https://github.com/Zygahedron/Starbecue/releases) if you want stable versions.
 
 While not required it is recommended you install the Monster Config Core Loader mods found [here](https://steamcommunity.com/sharedfiles/filedetails/?id=2442860690) and [here](https://steamcommunity.com/sharedfiles/filedetails/?id=2442873217), if you're using Stardust Core then you should get [this](https://steamcommunity.com/sharedfiles/filedetails/?id=2690363974) and if you're using FU you'll also need [this](https://steamcommunity.com/sharedfiles/filedetails/?id=2442880727) because it should fix potential compatibility issues.
 
@@ -44,33 +44,34 @@ More content can be found via discovering **Auri's Shop** which you can get to v
 - Glitch
 - Novakid
 - Fenerox
-- Avali
-- Novali
-- Lucario
-- Lycanroc
-- Eevee (GalaxyFoxes)
-- Eevee (Remade)
-- Umbreon
-- Braixen
-- Delphox
-- Crylan
-- Rodent
-- Lyceen
-- Latex
-- Elysian
-- Fennix
-- Felin
-- Draconis
-- Draconis (Full Dragon Reskin)
-- Gnolls
-- Argonians
-- Sergals
-- Familiars
-- Vulpes
-- Kazdra
-- Elduukhar
-- Attarran
-- Neki
+- [Avali](https://steamcommunity.com/sharedfiles/filedetails/?id=729558042)
+- [Novali](https://steamcommunity.com/sharedfiles/filedetails/?id=1386730092)
+- [Lucario](https://steamcommunity.com/sharedfiles/filedetails/?id=1356955138)
+- [Lycanroc](https://steamcommunity.com/sharedfiles/filedetails/?id=1800401078)
+- [Eevee](https://steamcommunity.com/sharedfiles/filedetails/?id=1405822108) (GalaxyFoxes)
+- [Eevee](https://steamcommunity.com/sharedfiles/filedetails/?id=1266991719) (Remade)
+- [Umbreon](https://steamcommunity.com/sharedfiles/filedetails/?id=730345787)
+- [Braixen](https://steamcommunity.com/sharedfiles/filedetails/?id=2260578148)
+- [Delphox](https://steamcommunity.com/sharedfiles/filedetails/?id=2260578148)
+- [Crylan](https://steamcommunity.com/sharedfiles/filedetails/?id=1197335162)
+- [Rodent](https://github.com/Zygahedron/StarboundSimpleVoreMod) (Sheights' version of SSVM is broken, this is a fixed fork)
+- [Lyceen](https://steamcommunity.com/sharedfiles/filedetails/?id=1360547769)
+- [Latex](https://steamcommunity.com/sharedfiles/filedetails/?id=1818502101)
+- [Elysian](https://steamcommunity.com/sharedfiles/filedetails/?id=1405822108)
+- [Fennix](https://steamcommunity.com/sharedfiles/filedetails/?id=1405822108)
+- [Felin](https://steamcommunity.com/sharedfiles/filedetails/?id=729429063)
+- [Draconis](https://steamcommunity.com/sharedfiles/filedetails/?id=1370154570)
+- [Draconis](https://steamcommunity.com/sharedfiles/filedetails/?id=1226150792) (Full Dragon Reskin)
+- [Gnolls](https://steamcommunity.com/sharedfiles/filedetails/?id=1655860448)
+- [Argonians](https://steamcommunity.com/sharedfiles/filedetails/?id=740694177)
+- [Sergals](https://steamcommunity.com/sharedfiles/filedetails/?id=1420856270) (Most reskins should work too)
+- [Familiars](https://steamcommunity.com/sharedfiles/filedetails/?id=729597107)
+- [Vulpes](https://steamcommunity.com/sharedfiles/filedetails/?id=1307942879)
+- [Kazdra](https://steamcommunity.com/sharedfiles/filedetails/?id=767787220)
+- [Elduukhar](https://steamcommunity.com/sharedfiles/filedetails/?id=729480149)
+- [Attarran](https://steamcommunity.com/sharedfiles/filedetails/?id=797166006)
+- [Neki](https://steamcommunity.com/sharedfiles/filedetails/?id=2611501999)
+- [Lastree](https://steamcommunity.com/sharedfiles/filedetails/?id=1380941596)
 
 This mod includes no assets from the respective modded races, modified or not, meaning said modded race *must* be installed to access its content
 

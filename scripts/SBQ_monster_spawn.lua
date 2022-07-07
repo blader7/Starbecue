@@ -13,6 +13,12 @@ require("/scripts/SBQ_immunities.lua")
 
 function init()
 
+	status.setStatusProperty( "sbqCurrentData", nil)
+
+	message.setHandler("sbqPredatorDespawned", function (_,_, eaten, species, occupants)
+		status.setStatusProperty( "sbqCurrentData", nil)
+	end)
+
 	if type(_monster_setDamageTeam) ~= "function" then
 		_monster_setDamageTeam = monster.setDamageTeam
 		monster.setDamageTeam = capture_monster_setDamageTeam
@@ -33,7 +39,7 @@ function init()
 		end
 	end)
 
-	sbq.handleImmunities()
+	sbq.handleImmunities("monster")
 
 	oldinit()
 end

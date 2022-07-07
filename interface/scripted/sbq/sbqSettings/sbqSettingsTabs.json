@@ -13,7 +13,7 @@
 			]},
 			{ "type" : "tab", "id" : "preyHelpTab", "title" : "Prey", "icon" : "/interface/scripted/sbq/sbqSettings/sbqCodex.png", "visible" : true, "color" : "ff00ff", "contents" : [
 				{ "type" : "scrollArea", "mode" : "vertical", "thumbScrolling" : true, "scrollBars" : true, "scrollDirections" : [0, 1], "children" : [ { "type" : "panel", "style" : "flat", "children" : [
-					{ "type" : "label", "text" : "^cyan;Prey Information^reset;\n \nWhether you are being eaten by a object predator, or a player transformed into a predator, as prey you will have a HUD in the bottom right, this indicates which directions you can struggle to cause the predator to do something.\n \nFor player controlled predators, most struggles are disabled so that player is in full control of their state, but if they are in a state where an escape is available, you may be able to struggle out still, but it is possible for them to disable being able to escape entirely in their settings.\n \n^red;Red^reset;\nindicates a direction in which you could escape, such as out the mouth or butt, your prey settings do not impact whether the arrow appears or not, but they do effect whether you can actally escape, a red arrow may indicate an anal vore escape, but if it isn't enabled in your settings, struggling that direction will not do anything.\n \n^blue;Blue^reset;\nIndicates a state change, such as making the predator stand up or sit down.\n \n^green;Green^reset;\nIndicates a state change, but only for state changes that would bring you closer to a state you can escape from.\n \n^cyan;Cyan^reset;\nIndicates a direction that would move you to another location within the predator's body.\n \n^yellow;Yellow^reset;\nIndicates a direction that would cause you to get eaten if you're just being held currently.\n \nIf you ever need to escape, yet such a thing is currently impossible, that being you're nested inside someone else, or a mean pred isn't letting you out... or something just happened to break, to get out you just need to hold ^green;all four directions^reset; and then press ^green; space^reset;. Only ever use this feature if you absolutely need to!" }
+					{ "type" : "label", "text" : "^cyan;Prey Information^reset;\n \nWhether you are being eaten by a object predator, or a player transformed into a predator, as prey you will have a HUD in the bottom right, this indicates which directions you can struggle to cause the predator to do something.\n \nFor player controlled predators, most struggles are disabled so that player is in full control of their state, but if they are in a state where an escape is available, you may be able to struggle out still, but it is possible for them to disable being able to escape entirely in their settings.\n \n^red;Red^reset;\nindicates a direction in which you could escape, such as out the mouth or butt, your prey settings do not impact whether the arrow appears or not, but they do effect whether you can actally escape, a red arrow may indicate an anal vore escape, but if it isn't enabled in your settings, struggling that direction will not do anything.\n \n^blue;Blue^reset;\nIndicates a state change, such as making the predator stand up or sit down.\n \n^green;Green^reset;\nIndicates a state change, but only for state changes that would bring you closer to a state you can escape from.\n \n^cyan;Cyan^reset;\nIndicates a direction that would move you to another location within the predator's body.\n \n^yellow;Yellow^reset;\nIndicates a direction that would cause you to get eaten if you're just being held currently.\n \nIf you ever need to escape, yet such a thing is currently impossible, that being you're nested inside someone else, or a mean pred isn't letting you out... or something just happened to break, to get out you just need to hold ^green;Left and Right^reset; and then press ^green; space^reset;. Only ever use this feature if you absolutely need to!" }
 				]}]}
 			]},
 			{ "type" : "tab", "id" : "otherHelpTab", "title" : "Other", "icon" : "/interface/scripted/sbq/sbqSettings/sbqCodex.png", "visible" : true, "color" : "ff00ff", "contents" : [
@@ -27,6 +27,15 @@
 					{ "type" : "label", "id" : "patronsLabel", "text" : "" },
 					{ "type" : "label", "text" : " \nThank you to everyone who has supported the project! I wouldn't have had the time or funds to do this without you!" }
 				]}]}
+			]},
+			{ "type" : "tab", "id" : "resetHelpTab", "title" : "Reset", "icon" : "/interface/scripted/sbq/sbqSettings/sbqReset.png", "visible" : true, "color" : "ff00ff", "contents" : [
+				{ "type" : "scrollArea", "mode" : "vertical", "thumbScrolling" : true, "scrollBars" : true, "scrollDirections" : [0, 1], "children" : [ { "type" : "panel", "style" : "flat", "children" : [
+					{ "type" : "label", "text" : "^cyan;Reset Settings^reset;\n \nSometimes through the updates, things might get changed around, and sometimes things might get messed up, values set in the settings in older versions may cause problems in newer ones. Therefore you may need to reset your settings to the default values to clear these errors. Or you just want to reset back to the defaults in general. This page allows you to do so."},
+					{"type" : "button", "id" : "resetGlobalSettings", "caption" : "Reset Global Settings", "color" : "ff0000", "toolTip" : "Resets your Global Settings to the default values"},
+					{"type" : "button", "id" : "resetAllPredSettings", "caption" : "Reset All Predator Settings", "color" : "ff0000", "toolTip" : "Resets all Predator Transformation settings to the default values."},
+					{"type" : "button", "id" : "resetCurPredSettings", "caption" : "Reset Current Predator Settings", "color" : "ff0000", "toolTip" : "Resets the current Predator Transformation settings to the default values."}
+
+				]}]}
 			]}
 		]}
 	]},
@@ -39,23 +48,6 @@
 			{ "type" : "label", "text" : "^cyan;Starbound Simple Vore Mod Overrides^reset;\n \nTo make compatibiliity smoother between Starbecue, as well as improve how some things are handled in SSVM, Starbecue overwrites the functions of some key things in SSVM, either to have better parity or to fix bugs.\nAlso Auri's Shop appears in what was an empty space in Foodhall.\n \n^cyan;Prey Enabling^reset;\nSSVM's system of enabling vore on a planet by placing a big lever down has been overwritten by Starbecue's prey enabling settings, it is now, per player, per vore type. This applies to both the SSVM NPC preds which perform their assigned vore type, and the SSVM Vore RP tech, for Oral Vore and Unbirth, which does recognize the distinction of which the player has active.\n \n^cyan;Bugfixes^reset;\nIt is well known that having multiple SSVM NPC preds free to roam around a colony can cause crashes if one has eaten another, therefore, Starbecue has modified the behavior so that SSVM Pred NPCs cannot eat other SSVM Pred NPCs, this also means that Starbecue predators cannot eat them either, both good for avoiding bugs, as well as probably respecting the wishes of the owner of the character.\nStarbecue makes SSVM compatible with other mods that modify monsters by having a copy of its monster script to add to the monster core loader.\n \n^cyan;Things that Starbecue does NOT do^reset;\nStarbecue's Preditor will not, and will never work on SSVM NPCs VSOs or SPOs.\nStarbecue's Prey Enabling System does not apply to SSVM VSOs and SPOs.\nStarbecue's Modifier Items will not effect SSVM NPCs, VSOs, or SPOs.\nStarbecue's Vore NPC Summoner will never effect SSVM NPCs.\n \n^cyan;Final Note^reset;\nOverriding functions for someone else's mod isn't always nice, but since SSVM is no longer in active development, it felt like it should be done, I will remove such overrides if Sheights were to ask." }
 		]}]}
 	]},
-	"speciesPresetList" : [
-		"human",
-		"avian",
-		"apex",
-		"floran",
-		"hylotl",
-		"glitch",
-		"novakid",
-		"fenerox",
-		"Zevi"
-	],
-	"speciesPresets" : {
-		"Zevi" : {
-			"species" : "sbqZevi_Zygahedron",
-			"directives" : "?replace;418093=418093fb;57a3b9=57a3b9fb;70b9cf=70b9cffb"
-		}
-	},
 
 	"speciesSettingsTabs" : {
 		"sbqOccupantHolder" : {
@@ -64,31 +56,24 @@
 				{"mode": "horizontal"},
 				{ "type" : "panel", "id" : "bodyPartsPanel", "style" : "convex", "children" : [
 					{ "type" : "label", "text" : "Body Parts", "inline" : true },{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
-					[{ "type" : "checkBox", "id" : "bra", "toolTip" : "Wear a bra, blocks Breast Vore"}, { "type" : "label", "text" : " Bra" }],
-					[{ "type" : "checkBox", "id" : "underwear", "toolTip" : "Wear underwear, blocks Anal Vore, Cock Vore, and Unbirth"}, { "type" : "label", "text" : " Underwear" }],
+					[{ "type" : "checkBox", "id" : "bra", "toolTip" : "Wear a bra, blocks Breast Vore"}, { "type" : "iconButton", "id" : "braLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Bra" }],
+					[{ "type" : "checkBox", "id" : "underwear", "toolTip" : "Wear underwear, blocks Anal Vore, Cock Vore, and Unbirth"}, { "type" : "iconButton", "id" : "underwearLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Underwear" }],
 
-					[{ "type" : "checkBox", "id" : "tail", "toolTip" : "Not everything usually has a tail, this might give things one"}, { "type" : "label", "text" : " Tail" }],
-					[{ "type" : "checkBox", "id" : "tailMaw", "toolTip" : "Give your tail a tailmaw"}, { "type" : "label", "text" : " Tailmaw" }],
-					[{ "type" : "checkBox", "id" : "navel", "toolTip" : "Enable the navel for navel vore and escapes"}, { "type" : "label", "text" : " Navel" }],
+					[{ "type" : "checkBox", "id" : "tail", "toolTip" : "Not everything usually has a tail, this might give things one"}, { "type" : "iconButton", "id" : "tailLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Tail" }],
+					[{ "type" : "checkBox", "id" : "tailMaw", "toolTip" : "Give your tail a tailmaw"}, { "type" : "iconButton", "id" : "tailmawLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Tailmaw" }],
+					[{ "type" : "checkBox", "id" : "navel", "toolTip" : "Enable the navel for navel vore and escapes"}, { "type" : "iconButton", "id" : "navelLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Navel" }],
 
-					[{ "type" : "checkBox", "id" : "breasts", "toolTip" : "Boobs! for breast vore"}, { "type" : "label", "text" : " Breasts" }],
-					[{ "type" : "checkBox", "id" : "symmetricalBreasts", "toolTip" : "When one of the breasts is stretched out, the other will be stretched the same amount, even if theres nobody inside"}, { "type" : "label", "text" : " Symmetrical Breasts" }],
+					[{ "type" : "checkBox", "id" : "breasts", "toolTip" : "Boobs! for breast vore"}, { "type" : "iconButton", "id" : "breastsLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Breasts" }],
+					[{ "type" : "checkBox", "id" : "symmetricalBreasts", "toolTip" : "When one of the breasts is stretched out, the other will be stretched the same amount, even if theres nobody inside"}, { "type" : "iconButton", "id" : "symmetricalBreastsLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Symmetrical Breasts" }],
 
-					[{ "type" : "checkBox", "id" : "penis",  "toolTip" : "The Cock Vore Action shrinks people down to fit inside" }, { "type" : "label", "text" : " Penis" }],
-					[{ "type" : "checkBox", "id" : "balls", "toolTip" : "People can struggle down the shaft into the balls"}, { "type" : "label", "text" : " Balls" }],
-					[{ "type" : "checkBox", "id" : "symmetricalBalls", "toolTip" : "When one of the balls is stretched out, the other will be stretched the same amount, even if theres nobody inside"}, { "type" : "label", "text" : " Symmetrical Balls" }],
+					[{ "type" : "checkBox", "id" : "penis",  "toolTip" : "The Cock Vore Action shrinks people down to fit inside" }, { "type" : "iconButton", "id" : "penisLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Penis" }],
+					[{ "type" : "checkBox", "id" : "balls", "toolTip" : "People can struggle down the shaft into the balls"}, { "type" : "iconButton", "id" : "ballsLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Balls" }],
+					[{ "type" : "checkBox", "id" : "symmetricalBalls", "toolTip" : "When one of the balls is stretched out, the other will be stretched the same amount, even if theres nobody inside"}, { "type" : "iconButton", "id" : "symmetricalBallsLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Symmetrical Balls" }],
 
-					[{ "type" : "checkBox", "id" : "pussy", "toolTip" : "Have a pussy and be able to perform unbirth"}, { "type" : "label", "text" : " Pussy" }]
+					[{ "type" : "checkBox", "id" : "pussy", "toolTip" : "Have a pussy and be able to perform unbirth"}, { "type" : "iconButton", "id" : "pussyLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Pussy" }]
 				]}]},
 				{ "type" : "panel", "id" : "passiveEffectsPanel", "style" : "convex", "children" : [
 					{ "type" : "label", "text" : "Passive Effects", "inline" : true },{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
-					[{ "type" : "checkBox", "id" : "penisCumTF", "toolTip" : "People in the penis automatically start turning into cum"}, { "type" : "label", "text" : " Penis Cum TF" }],
-					[{ "type" : "checkBox", "id" : "penisCumDigestion", "toolTip" : "People in the penis automatically start digesting into cum (fatal)"}, { "type" : "label", "text" : " Penis Cum Digestion" }],
-					[{ "type" : "checkBox", "id" : "ballsCumTF",  "toolTip" : "People in the balls automatically start turning into cum" }, { "type" : "label", "text" : " Balls Cum TF" }],
-					[{ "type" : "checkBox", "id" : "ballsCumDigestion", "toolTip" : "People in the balls automatically start digesting into cum (fatal)"}, { "type" : "label", "text" : " Balls Cum Digestion" }],
-					[{ "type" : "checkBox", "id" : "wombEggify",  "toolTip" : "People in the womb will be trapped within an egg" }, { "type" : "label", "text" : " Womb Eggify" }],
-					[{ "type" : "checkBox", "id" : "wombTF",  "toolTip" : "People in the womb will be transformed into your species" }, { "type" : "label", "text" : " Womb TF" }],
-					[{ "type" : "checkBox", "id" : "wombCumDigestion",  "toolTip" : "People in the womb will automatically start digesting into cum (fatal)" }, { "type" : "label", "text" : " Womb Digestion" }]
 				]}]}
 			]}
 		},
@@ -98,32 +83,24 @@
 				{"mode": "horizontal"},
 				{ "type" : "panel", "id" : "bodyPartsPanel", "style" : "convex", "children" : [
 					{ "type" : "label", "text" : "Body Parts", "inline" : true },{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
-					[{ "type" : "checkBox", "id" : "bra", "toolTip" : "Wear a bra, blocks Breast Vore"}, { "type" : "label", "text" : " Bra" }],
-					[{ "type" : "checkBox", "id" : "underwear", "toolTip" : "Wear underwear, blocks Anal Vore, Cock Vore, and Unbirth"}, { "type" : "label", "text" : " Underwear" }],
+					[{ "type" : "checkBox", "id" : "bra", "toolTip" : "Wear a bra, blocks Breast Vore"}, { "type" : "iconButton", "id" : "braLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Bra" }],
+					[{ "type" : "checkBox", "id" : "underwear", "toolTip" : "Wear underwear, blocks Anal Vore, Cock Vore, and Unbirth"}, { "type" : "iconButton", "id" : "underwearLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Underwear" }],
 
-					[{ "type" : "checkBox", "id" : "tail", "toolTip" : "Not everything usually has a tail, this might give things one"}, { "type" : "label", "text" : " Tail" }],
-					[{ "type" : "checkBox", "id" : "tailMaw", "toolTip" : "Give your tail a tailmaw"}, { "type" : "label", "text" : " Tailmaw" }],
-					[{ "type" : "checkBox", "id" : "navel", "toolTip" : "Enable the navel for navel vore and escapes"}, { "type" : "label", "text" : " Navel" }],
+					[{ "type" : "checkBox", "id" : "tail", "toolTip" : "Not everything usually has a tail, this might give things one"}, { "type" : "iconButton", "id" : "tailLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Tail" }],
+					[{ "type" : "checkBox", "id" : "tailMaw", "toolTip" : "Give your tail a tailmaw"}, { "type" : "iconButton", "id" : "tailmawLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Tailmaw" }],
+					[{ "type" : "checkBox", "id" : "navel", "toolTip" : "Enable the navel for navel vore and escapes"}, { "type" : "iconButton", "id" : "navelLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Navel" }],
 
-					[{ "type" : "checkBox", "id" : "breasts", "toolTip" : "Boobs! for breast vore"}, { "type" : "label", "text" : " Breasts" }],
-					[{ "type" : "checkBox", "id" : "symmetricalBreasts", "toolTip" : "When one of the breasts is stretched out, the other will be stretched the same amount, even if theres nobody inside"}, { "type" : "label", "text" : " Symmetrical Breasts" }],
+					[{ "type" : "checkBox", "id" : "breasts", "toolTip" : "Boobs! for breast vore"}, { "type" : "iconButton", "id" : "breastsLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Breasts" }],
+					[{ "type" : "checkBox", "id" : "symmetricalBreasts", "toolTip" : "When one of the breasts is stretched out, the other will be stretched the same amount, even if theres nobody inside"}, { "type" : "iconButton", "id" : "symmetricalBreastsLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Symmetrical Breasts" }],
 
-					[{ "type" : "checkBox", "id" : "penis",  "toolTip" : "The Cock Vore Action shrinks people down to fit inside" }, { "type" : "label", "text" : " Penis" }],
-					[{ "type" : "checkBox", "id" : "balls", "toolTip" : "People can struggle down the shaft into the balls"}, { "type" : "label", "text" : " Balls" }],
-					[{ "type" : "checkBox", "id" : "symmetricalBalls", "toolTip" : "When one of the balls is stretched out, the other will be stretched the same amount, even if theres nobody inside"}, { "type" : "label", "text" : " Symmetrical Balls" }],
+					[{ "type" : "checkBox", "id" : "penis",  "toolTip" : "The Cock Vore Action shrinks people down to fit inside" }, { "type" : "iconButton", "id" : "penisLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Penis" }],
+					[{ "type" : "checkBox", "id" : "balls", "toolTip" : "People can struggle down the shaft into the balls"}, { "type" : "iconButton", "id" : "ballsLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Balls" }],
+					[{ "type" : "checkBox", "id" : "symmetricalBalls", "toolTip" : "When one of the balls is stretched out, the other will be stretched the same amount, even if theres nobody inside"}, { "type" : "iconButton", "id" : "symmetricalBallsLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Symmetrical Balls" }],
 
-					[{ "type" : "checkBox", "id" : "pussy", "toolTip" : "Have a pussy and be able to perform unbirth"}, { "type" : "label", "text" : " Pussy" }]
+					[{ "type" : "checkBox", "id" : "pussy", "toolTip" : "Have a pussy and be able to perform unbirth"}, { "type" : "iconButton", "id" : "pussyLocked", "image" : "lockedDisabled.png", "visible" : false }, { "type" : "label", "text" : " Pussy" }]
 				]}]},
 				{ "type" : "panel", "id" : "passiveEffectsPanel", "style" : "convex", "children" : [
 					{ "type" : "label", "text" : "Passive Effects", "inline" : true },{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
-					[{ "type" : "checkBox", "id" : "bellyTF",  "toolTip" : "People in the belly will be transformed into your species" }, { "type" : "label", "text" : " Belly TF" }],
-					[{ "type" : "checkBox", "id" : "penisCumTF", "toolTip" : "People in the penis automatically start turning into cum"}, { "type" : "label", "text" : " Penis Cum TF" }],
-					[{ "type" : "checkBox", "id" : "penisCumDigestion", "toolTip" : "People in the penis automatically start digesting into cum (fatal)"}, { "type" : "label", "text" : " Penis Cum Digestion" }],
-					[{ "type" : "checkBox", "id" : "ballsCumTF",  "toolTip" : "People in the balls automatically start turning into cum" }, { "type" : "label", "text" : " Balls Cum TF" }],
-					[{ "type" : "checkBox", "id" : "ballsCumDigestion", "toolTip" : "People in the balls automatically start digesting into cum (fatal)"}, { "type" : "label", "text" : " Balls Cum Digestion" }],
-					[{ "type" : "checkBox", "id" : "wombEggify",  "toolTip" : "People in the womb will be trapped within an egg" }, { "type" : "label", "text" : " Womb Eggify" }],
-					[{ "type" : "checkBox", "id" : "wombTF",  "toolTip" : "People in the womb will be transformed into your species" }, { "type" : "label", "text" : " Womb TF" }],
-					[{ "type" : "checkBox", "id" : "wombCumDigestion",  "toolTip" : "People in the womb will automatically start digesting into cum (fatal)" }, { "type" : "label", "text" : " Womb Digestion" }]
 				]}]}
 			]}
 		},
@@ -137,7 +114,6 @@
 				]}]},
 				{ "type" : "panel", "style" : "convex", "children" : [
 					{ "type" : "label", "text" : "Passive Effects", "inline" : true },{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
-					[{ "type" : "checkBox", "id" : "bellyTF", "toolTip" : "People in the belly will be transformed into more vappies!"}, { "type" : "label", "text" : " Belly TF" }]
 				]}]}
 			]}
 		},
@@ -150,7 +126,6 @@
 				]}]},
 				{ "type" : "panel", "style" : "convex", "children" : [
 					{ "type" : "label", "text" : "Passive Effects", "inline" : true },{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
-					[{ "type" : "checkBox", "id" : "bellyEggify", "toolTip" : "People in the belly will be trapped within an Egg"}, { "type" : "label", "text" : " Belly Eggify" }]
 				]}]}
 			]}
 		},
@@ -169,10 +144,6 @@
 				]}]},
 				{ "type" : "panel", "style" : "convex", "children" : [
 					{ "type" : "label", "text" : "Passive Effects", "inline" : true },{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
-					[{ "type" : "checkBox", "id" : "penisCumTF", "toolTip" : "People in the penis automatically start turning into cum"}, { "type" : "label", "text" : " Penis Cum TF" }],
-					[{ "type" : "checkBox", "id" : "penisCumDigestion", "toolTip" : "People in the penis automatically start digesting into cum (fatal)"}, { "type" : "label", "text" : " Penis Cum Digestion" }],
-					[{ "type" : "checkBox", "id" : "ballsCumTF",  "toolTip" : "People in the balls automatically start turning into cum" }, { "type" : "label", "text" : " Balls Cum TF" }],
-					[{ "type" : "checkBox", "id" : "ballsCumDigestion", "toolTip" : "People in the balls automatically start digesting into cum (fatal)"}, { "type" : "label", "text" : " Balls Cum Digestion" }]
 				]}]}
 			]}
 		},
@@ -194,22 +165,15 @@
 				]}]},
 				{ "type" : "panel", "style" : "convex", "children" : [
 					{ "type" : "label", "text" : "Passive Effects", "inline" : true },{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
-					[{ "type" : "checkBox", "id" : "penisCumTF", "toolTip" : "People in the penis automatically start turning into cum"}, { "type" : "label", "text" : " Penis Cum TF" }],
-					[{ "type" : "checkBox", "id" : "penisCumDigestion", "toolTip" : "People in the penis automatically start digesting into cum (fatal)"}, { "type" : "label", "text" : " Penis Cum Digestion" }],
-					[{ "type" : "checkBox", "id" : "ballsCumTF",  "toolTip" : "People in the balls automatically start turning into cum" }, { "type" : "label", "text" : " Balls Cum TF" }],
-					[{ "type" : "checkBox", "id" : "ballsCumDigestion", "toolTip" : "People in the balls automatically start digesting into cum (fatal)"}, { "type" : "label", "text" : " Balls Cum Digestion" }],
-					[{ "type" : "checkBox", "id" : "wombEggify",  "toolTip" : "People in the womb will be trapped within an egg" }, { "type" : "label", "text" : " Womb Eggify" }],
-					[{ "type" : "checkBox", "id" : "wombCumDigestion",  "toolTip" : "People in the womb will automatically start digesting into cum (fatal)" }, { "type" : "label", "text" : " Womb Digestion" }]
 				]}]}
 			]}
 		},
 		"sbqSlime" : {
 			"scripts" : [],
-			"tab": { "type" : "tab", "id" : "avianSettingsTab", "title" : "Config", "icon" : "/vehicles/sbq/sbqAvian/skins/default/icon.png", "visible" : true, "color" : "ff00ff", "contents" : [
+			"tab": { "type" : "tab", "id" : "slimeSettingsTab", "title" : "Config", "icon" : "/vehicles/sbq/sbqAvian/skins/default/icon.png", "visible" : true, "color" : "ff00ff", "contents" : [
 				{"mode": "horizontal"},
 				{ "type" : "panel", "style" : "convex", "children" : [
 					{ "type" : "label", "text" : "Passive Effects", "inline" : true },{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
-					[{ "type" : "checkBox", "id" : "bellyTF", "toolTip" : "People trapped inside will be transformed into more slimes"}, { "type" : "label", "text" : " Slime TF" }]
 				]}]}
 			]}
 		},
@@ -226,14 +190,8 @@
 					[{ "type" : "checkBox", "id" : "pussy", "toolTip" : "Have a pussy and be able to perform unbirth"}, { "type" : "label", "text" : " Pussy" }]
 
 				]}]},
-				{ "type" : "panel", "style" : "convex", "children" : [{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
-					{ "type" : "label", "text" : "Passive Effects", "inline" : true },
-					[{ "type" : "checkBox", "id" : "penisCumTF", "toolTip" : "People in the penis automatically start turning into cum"}, { "type" : "label", "text" : " Penis Cum TF" }],
-					[{ "type" : "checkBox", "id" : "penisCumDigestion", "toolTip" : "People in the penis automatically start digesting into cum (fatal)"}, { "type" : "label", "text" : " Penis Cum Digestion" }],
-					[{ "type" : "checkBox", "id" : "ballsCumTF",  "toolTip" : "People in the balls automatically start turning into cum" }, { "type" : "label", "text" : " Balls Cum TF" }],
-					[{ "type" : "checkBox", "id" : "ballsCumDigestion", "toolTip" : "People in the balls automatically start digesting into cum (fatal)"}, { "type" : "label", "text" : " Balls Cum Digestion" }],
-					[{ "type" : "checkBox", "id" : "wombEggify",  "toolTip" : "People in the womb will be trapped within an egg" }, { "type" : "label", "text" : " Womb Eggify" }],
-					[{ "type" : "checkBox", "id" : "wombCumDigestion",  "toolTip" : "People in the womb will automatically start digesting into cum (fatal)" }, { "type" : "label", "text" : " Womb Digestion" }]
+				{ "type" : "panel", "style" : "convex", "children" : [
+					{ "type" : "label", "text" : "Passive Effects", "inline" : true },{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
 				]}]}
 			]}
 		}

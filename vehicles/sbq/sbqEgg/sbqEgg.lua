@@ -14,8 +14,10 @@ function sbq.initAfterInit()
 	if not sbq.eat(sbq.driver, "egg", true) then
 		vehicle.destroy()
 	end
-	if sbq.settings.skinNames.head == "plastic" then
+	if sbq.settings.skinNames.head == "plastic" or sbq.settings.occupantVisible then
 		sbq.occupant[0].visible = true
+	else
+		sbq.occupant[0].visible = false
 	end
 end
 

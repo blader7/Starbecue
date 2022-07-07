@@ -30,7 +30,7 @@ function sbq.setItemActionColorReplaceDirectives()
 		for j, color in ipairs(basePalette) do
 			color = replacePalette[j]
 			if fullbright and #color <= #"ffffff" then -- don't tack it on it if it already has a defined opacity or fullbright
-				color = color.."fb"
+				color = color.."fe"
 			end
 			colorReplaceString = colorReplaceString.."?replace;"..(basePalette[j] or "").."="..(color or "")
 		end
@@ -47,7 +47,7 @@ function sbq.setItemActionColorReplaceDirectives()
 		for j, color in ipairs(basePalette) do
 			color = replacePalette[j]
 			if fullbright and #color <= #"ffffff" then -- don't tack it on it if it already has a defined opacity or fullbright
-				color = color.."fb"
+				color = color.."fe"
 			end
 			colorReplaceString = colorReplaceString.."?replace;"..(basePalette[j] or "").."="..(color or "")
 
@@ -76,60 +76,6 @@ function sbq.letout(id)
 		return sbq.ballsToShaft({id = id})
 	elseif location == "womb" then
 		return sbq.doTransition("unbirthEscape", {id = id})
-	end
-end
-
-function sbq.otherLocationEffects(i, eid, health, bellyEffect, location, powerMultiplier )
-	if location == "womb" then
-		local bellyEffect = "sbqHeal"
-		if sbq.settings.displayDigest then
-			if sbq.config.bellyDisplayStatusEffects[bellyEffect] ~= nil then
-				bellyEffect = sbq.config.bellyDisplayStatusEffects[bellyEffect]
-			end
-		end
-		world.sendEntityMessage( eid, "applyStatusEffect", bellyEffect, powerMultiplier, entity.id())
-	end
-
-	if (sbq.occupant[i].progressBar <= 0) then
-		if (sbq.settings.penisCumTF and location == "shaft") or (sbq.settings.ballsCumTF and ( location == "balls" or location == "ballsR" or location == "ballsL" )) then
-			sbq.loopedMessage("CumTF"..eid, eid, "sbqIsPreyEnabled", {"transformImmunity"}, function (immune)
-				if not immune then
-					transformMessageHandler( eid , 3, sbq.config.victimTransformPresets.cumBlob )
-				end
-			end)
-		elseif sbq.settings.wombEggify and location == "womb" and sbq.occupant[i].species ~= "sbqEgg" then
-			local bellyEffect = "sbqHeal"
-			if sbq.settings.displayDigest then
-				if sbq.config.bellyDisplayStatusEffects[bellyEffect] ~= nil then
-					bellyEffect = sbq.config.bellyDisplayStatusEffects[bellyEffect]
-				end
-			end
-
-			sbq.loopedMessage("Eggify"..eid, eid, "sbqIsPreyEnabled", {"eggImmunity"}, function (immune)
-				if not immune then
-					local eggData = root.assetJson("/vehicles/sbq/sbqEgg/sbqEgg.vehicle")
-					local replaceColors = {
-					math.random(1, #eggData.sbqData.replaceColors[1] - 1),
-					math.random(1, #eggData.sbqData.replaceColors[2] - 1)
-					}
-					transformMessageHandler( eid, 3, {
-						barColor = eggData.sbqData.replaceColors[2][replaceColors[2]+1],
-						forceSettings = true,
-						layer = true,
-						state = "smol",
-						species = "sbqEgg",
-						layerLocation = "egg",
-						layerDigest = true,
-						settings = {
-							cracks = 0,
-							bellyEffect = bellyEffect,
-							escapeDifficulty = sbq.settings.escapeDifficulty,
-							replaceColors = replaceColors
-						}
-					})
-				end
-			end)
-		end
 	end
 end
 

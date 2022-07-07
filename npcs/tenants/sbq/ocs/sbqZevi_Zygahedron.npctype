@@ -18,6 +18,7 @@
 		"/npcs/tenants/sbq/SBQ_vore_tenant.lua"
 	],
 	"scriptConfig" : {
+		"isOC" : true,
 		"behavior" : "sbqvorevillager",
 		"uniqueId" : "sbqZevi_Zygahedron",
 		"questGenerator" : {
@@ -39,11 +40,23 @@
 			"analVorePredEnable" : true,
 			"cockVorePredEnable" : true,
 			"unbirthPredEnable" : true,
-			"absorbVorePredEnable" : true,
+			"absorbVorePredEnable" : true
+		},
+		"sbqOverrideSettings" : {
+			"navelVorePred" : false,
+			"breastVorePred" : false,
+			"tailVorePred" : false,
 
-			"navelVorePredLock" : true,
-			"breastVorePredLock" : true,
-			"tailVorePredLock" : true
+			"penisCumTF" : false,
+			"wombTF" : false,
+
+			"penisCumDigestion" : false,
+			"ballsCumDigestion" : false,
+			"wombCumDigestion" : false
+		},
+		"sbqOverridePreyEnabled" : {
+			"cumDigestImmunity" : true,
+			"navelVore" : false
 		},
 
 		"defaultPortrait" : "Neutral.png",
@@ -810,14 +823,7 @@
 			}
 
 		},
-		"voreIcons" : {
-			"oralVore" : "/items/active/sbqController/oralVore.png?replace;154247=6c6c6c;23646a=8c8c8c;39979e=bfbfbf;4cc1c9=e3e3e3;63263d=418093fb;7a334d=57a3b9fb;9d4165=70b9cffb",
-			"absorbVore" : "/items/active/sbqController/absorbVore.png?replace;154247=6c6c6c;23646a=8c8c8c;39979e=bfbfbf;4cc1c9=e3e3e3;63263d=418093fb;7a334d=57a3b9fb;9d4165=70b9cffb",
-
-			"analVore" : "/items/active/sbqController/analVore.png?replace;154247=6c6c6c;23646a=8c8c8c;39979e=bfbfbf;4cc1c9=e3e3e3;63263d=418093fb;7a334d=57a3b9fb;9d4165=70b9cffb",
-			"cockVore" : "/items/active/sbqController/cockVore.png?replace;154247=6c6c6c;23646a=8c8c8c;39979e=bfbfbf;4cc1c9=e3e3e3;63263d=418093fb;7a334d=57a3b9fb;9d4165=70b9cffb",
-			"unbirth" : "/items/active/sbqController/unbirth.png?replace;154247=6c6c6c;23646a=8c8c8c;39979e=bfbfbf;4cc1c9=e3e3e3;63263d=418093fb;7a334d=57a3b9fb;9d4165=70b9cffb"
-		},
+		"iconDirectives" : "?replace;154247=6c6c6c;23646a=8c8c8c;39979e=bfbfbf;4cc1c9=e3e3e3;63263d=418093fe;7a334d=57a3b9fe;9d4165=70b9cffe",
 		"dialog" : {
 			"greeting" : {
 				"default" : {
@@ -887,7 +893,6 @@
 				"digestImmunity": true,
 
 				"cumDigestImmunity" : true,
-				"cumDigestImmunityLock" : true,
 
 				"transformImmunity": true,
 				"eggImmunity": false,
@@ -902,12 +907,10 @@
 				"analVore": true,
 				"unbirth": true,
 				"cockVore": true,
-				"breastVore": true,
-
-				"navelVoreLock" : true
+				"breastVore": true
 			},
 			"speciesAnimOverrideData" : {
-				"directives" : "?replace;418093=418093fb;57a3b9=57a3b9fb;70b9cf=70b9cffb",
+				"directives" : "?replace;418093=418093fe;57a3b9=57a3b9fe;70b9cf=70b9cffe",
 				"permanent" : true
 			}
 		}

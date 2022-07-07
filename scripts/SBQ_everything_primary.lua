@@ -99,94 +99,147 @@ end
 
 function sbq.doMysteriousTF(data)
 	if world.pointTileCollision(entity.position(), {"Null"}) then return end
-	local self = data
+	local overrideData = data or {}
+	local currentData = status.statusProperty("speciesAnimOverrideData") or {}
+	local customizedSpecies = status.statusProperty("sbqCustomizedSpecies") or {}
+	local originalSpecies = world.entitySpecies(entity.id())
 
-	if not self.species then
+	if not overrideData.species then
 		local speciesList = root.assetJson("/interface/windowconfig/charcreation.config").speciesOrdering
-		self.species = speciesList[math.random(#speciesList)]
+		overrideData.species = speciesList[math.random(#speciesList)]
 	end
+	if overrideData.species == originalSpecies and (not overrideData.identity) then
+		return sbq.endMysteriousTF()
+	end
+	local customData = customizedSpecies[overrideData.species]
+	overrideData = sb.jsonMerge(customData or {}, overrideData)
+
 	local genders = {"male", "female"}
-	if not self.gender then
-		self.gender = genders[math.random(2)]
-	end
-	if self.gender == "noChange" then
-		self.gender = world.entityGender(entity.id())
+
+	local genderswapImmunity = sb.jsonMerge(root.assetJson("/sbqGeneral.config:defaultPreyEnabled")[world.entityType(entity.id())], (status.statusProperty("sbqPreyEnabled") or {})).genderswapImmunity
+	if genderswapImmunity then
+		overrideData.gender = currentData.gender or world.entityGender(entity.id())
+	else
+		if not overrideData.gender then
+			overrideData.gender = genders[math.random(2)]
+		end
+		if overrideData.gender == "noChange" then
+			overrideData.gender = currentData.gender or world.entityGender(entity.id())
+		end
 	end
 
-	local success, speciesFile = pcall(root.assetJson, ("/species/"..self.species..".species"))
-	if success and not self.identity then
-		self.identity = {}
+	local success, speciesFile = pcall(root.assetJson, ("/species/"..overrideData.species..".species"))
+
+	overrideData.identity = overrideData.identity or {}
+
+	if success then
 		for i, data in ipairs(speciesFile.genders or {}) do
-			if data.name == self.gender then
-				self.identity.hairGroup = data.hairGroup or "hair"
-				self.identity.facialHairGroup = data.facialHairGroup or "facialHair"
-				self.identity.facialMaskGroup = data.facialMaskGroup or "facialMask"
+			if data.name == overrideData.gender then
+				overrideData.identity.hairGroup = overrideData.identity.hairGroup or data.hairGroup or "hair"
+				overrideData.identity.facialHairGroup = overrideData.identity.facialHairGroup or data.facialHairGroup or "facialHair"
+				overrideData.identity.facialMaskGroup = overrideData.identity.facialMaskGroup or data.facialMaskGroup or "facialMask"
 
-				if data.hair[1] ~= nil then
-					self.identity.hairType = data.hair[math.random(#data.hair)]
+				if data.hair and data.hair[1] then
+					overrideData.identity.hairType = overrideData.identity.hairType or data.hair[math.random(#data.hair)]
 				end
-				if data.facialHair[1] ~= nil then
-					self.identity.facialHairType = data.facialHair[math.random(#data.facialHair)]
+				if data.facialHair and data.facialHair[1] then
+					overrideData.identity.facialHairType = overrideData.identity.facialHairType or data.facialHair[math.random(#data.facialHair)]
 				end
-				if data.facialMask[1] ~= nil then
-					self.identity.facialMaskType = data.facialMask[math.random(#data.facialMask)]
+				if data.facialMask and data.facialMask[1] then
+					overrideData.identity.facialMaskType = overrideData.identity.facialMaskType or data.facialMask[math.random(#data.facialMask)]
 				end
 			end
 		end
 	end
-	local undyColor
-	if success and not self.directives then
-		local directives = ""
-		local colorTable = (speciesFile.bodyColor or {})[math.random(#speciesFile.bodyColor)]
+	local undyColor = overrideData.identity.undyColor or ""
+	if success and not overrideData.identity.undyColor and speciesFile.undyColor and speciesFile.undyColor[1] then
+		local index = math.random(#speciesFile.undyColor)
+		local colorTable = (speciesFile.undyColor or {})[index]
 		if type(colorTable) == "table" then
-			directives = "?replace"
+			undyColor = "?replace"
 			for color, replace in pairs(colorTable) do
-				directives = directives..";"..color.."="..replace
+				undyColor = undyColor..";"..color.."="..replace
 			end
 		end
-		local directives2 = ""
-		colorTable = (speciesFile.undyColor or {})[math.random(#speciesFile.undyColor)]
-		if type(colorTable) == "table" then
-			directives2 = "?replace"
-			for color, replace in pairs(colorTable) do
-				directives2 = directives2..";"..color.."="..replace
-			end
-		end
-		undyColor = directives2
-		self.directives = directives..directives2
+		overrideData.identity.undyColor = undyColor
+		overrideData.identity.undyColorIndex = index
 	end
-	if success and not self.hairDirectives then
-		local directives = ""
-		local colorTable = (speciesFile.hairColor or {})[math.random(#speciesFile.hairColor)]
 
+	local bodyColor = overrideData.identity.bodyDirectives or ""
+	if success and not overrideData.identity.bodyDirectives and speciesFile.bodyColor and speciesFile.bodyColor[1] then
+		local index = math.random(#speciesFile.bodyColor)
+		local colorTable = (speciesFile.bodyColor or {})[index]
 		if type(colorTable) == "table" then
-			directives = "?replace"
+			bodyColor = "?replace"
 			for color, replace in pairs(colorTable) do
-				directives = directives..";"..color.."="..replace
+				bodyColor = bodyColor..";"..color.."="..replace
 			end
 		end
+		overrideData.identity.bodyColorIndex = index
+		overrideData.identity.bodyDirectives = bodyColor
 
+		if speciesFile.altOptionAsUndyColor then
+			overrideData.identity.bodyDirectives = overrideData.identity.bodyDirectives..undyColor
+		end
+	end
+
+	local hairColor = overrideData.identity.hairDirectives or ""
+	if success and not overrideData.identity.hairDirectives and speciesFile.hairColor and speciesFile.hairColor[1] then
+		local index = math.random(#speciesFile.hairColor)
+		local colorTable = (speciesFile.hairColor or {})[index]
+		if type(colorTable) == "table" then
+			hairColor = "?replace"
+			for color, replace in pairs(colorTable) do
+				hairColor = hairColor..";"..color.."="..replace
+			end
+		end
+		overrideData.identity.hairColorIndex = index
 		if speciesFile.headOptionAsHairColor then
-			self.hairDirectives = directives
+			overrideData.identity.hairDirectives = hairColor
 		else
-			self.hairDirectives = self.directives
-		end
-		if speciesFile.hairColorAsBodySubColor then
-			self.directives = self.directives..self.hairDirectives
-			self.hairDirectives = self.directives
+			overrideData.identity.hairDirectives = overrideData.identity.bodyDirectives
 		end
 		if speciesFile.altOptionAsHairColor then
-			self.hairDirectives = self.hairDirectives..(undyColor or "")
+			overrideData.identity.hairDirectives = overrideData.identity.hairDirectives..undyColor
+		end
+		if speciesFile.hairColorAsBodySubColor then
+			overrideData.identity.bodyDirectives = overrideData.identity.bodyDirectives..hairColor
+		end
+		if speciesFile.bodyColorAsHairSubColor then
+			overrideData.identity.hairDirectives = overrideData.identity.hairDirectives..overrideData.identity.bodyDirectives
 		end
 	end
+
+	if not overrideData.identity.facialHairDirectives then
+		overrideData.identity.facialHairDirectives = overrideData.identity.facialHairDirectives or overrideData.identity.hairDirectives
+		if speciesFile.bodyColorAsFacialHairSubColor then
+			overrideData.identity.facialMaskDirectives = overrideData.identity.facialMaskDirectives..overrideData.identity.bodyDirectives
+		end
+	end
+	if not overrideData.identity.facialMaskDirectives then
+		overrideData.identity.facialMaskDirectives = overrideData.identity.facialMaskDirectives or overrideData.identity.hairDirectives
+		if speciesFile.bodyColorAsFacialMaskSubColor then
+			overrideData.identity.facialMaskDirectives = overrideData.identity.facialMaskDirectives..overrideData.identity.bodyDirectives
+		end
+	end
+
+	overrideData.identity.emoteDirectives = overrideData.identity.emoteDirectives or overrideData.identity.bodyDirectives
 
 	local specialStatus
 	if success then
 		specialStatus = speciesFile.customAnimStatus
 	end
 
-	self.mysteriousPotion = true
-	self.permanent = true
+	overrideData.mysteriousPotion = true
+	overrideData.permanent = true
+	overrideData.customAnimStatus = specialStatus
+
+	if (overrideData.species ~= originalSpecies and not customData) and not speciesFile.noUnlock then
+		overrideData.unlockSpecies = nil
+		customizedSpecies[overrideData.species] = overrideData
+		status.setStatusProperty("sbqCustomizedSpecies", customizedSpecies)
+		world.sendEntityMessage(entity.id(), "sbqUnlockedSpecies")
+	end
 
 	local statusProperty = status.statusProperty("speciesAnimOverrideData") or {}
 	if not statusProperty.mysteriousPotion then
@@ -194,9 +247,9 @@ function sbq.doMysteriousTF(data)
 		status.setStatusProperty("oldSpeciesAnimOverrideCategory", status.getPersistentEffects("speciesAnimOverride"))
 	end
 
-	status.setStatusProperty("sbqMysteriousPotionTF", self)
+	status.setStatusProperty("sbqMysteriousPotionTF", overrideData)
 	status.clearPersistentEffects("speciesAnimOverride")
-	status.setStatusProperty("speciesAnimOverrideData", self)
+	status.setStatusProperty("speciesAnimOverrideData", overrideData)
 	status.setPersistentEffects("speciesAnimOverride", {specialStatus or "speciesAnimOverride"})
 	refreshOccupantHolder()
 end

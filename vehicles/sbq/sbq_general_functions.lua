@@ -208,7 +208,7 @@ function sbq.getColorReplaceDirectives(predatorConfig, predatorSettings)
 
 			for j, color in ipairs(replacePalette) do
 				if fullbright and #color <= #"ffffff" then -- don't tack it on it if it already has a defined opacity or fullbright
-					color = color.."fb"
+					color = color.."fe"
 				end
 				colorReplaceString = colorReplaceString.."?replace;"..(basePalette[j] or "").."="..(color or "")
 			end
@@ -219,7 +219,7 @@ end
 
 
 function sbq.transformPrey(i)
-	local smolPreyData = sbq.occupant[i].progressBarData
+	local smolPreyData = sbq.occupant[i].progressBarData or {}
 	if smolPreyData.layer == true then
 		smolPreyData.layer = sbq.occupant[i].smolPreyData
 		for j = 0, sbq.occupantSlots do
@@ -230,60 +230,37 @@ function sbq.transformPrey(i)
 					location = "nested",
 					owner = sbq.occupant[i].id,
 					massMultiplier = smolPreyData.layerMass or 1,
-					digest = false
+					locationEffect = nestedPreyData.locationEffect
 				}
 			end
 		end
 	end
 	if type(smolPreyData.species) == "string" then
-		if world.entityType(sbq.occupant[i].id) == "player" and not smolPreyData.forceSettings then
+		local entityType = world.entityType(sbq.occupant[i].id)
+		if entityType == "player" or entityType == "NPC" and not smolPreyData.forceSettings then
 			sbq.addRPC(world.sendEntityMessage(sbq.occupant[i].id, "sbqLoadSettings", smolPreyData.species), function(settings)
-				smolPreyData.settings = settings
-				if sbq.occupant[i].species == "sbqEgg" then
-					sbq.occupant[i].smolPreyData.layer = smolPreyData
-				else
-					sbq.occupant[i].smolPreyData = smolPreyData
-					sbq.occupant[i].species = smolPreyData.species
-				end
+				sbq.doTransformPrey(i, sb.jsonMerge(smolPreyData.settings, settings or {}), smolPreyData)
 			end)
 		else
-			if sbq.occupant[i].species == "sbqEgg" then
-				sbq.occupant[i].smolPreyData.layer = smolPreyData
-			else
-				sbq.occupant[i].smolPreyData = smolPreyData
-				sbq.occupant[i].species = smolPreyData.species
-			end
-		end
-	else
-		smolPreyData.species = world.entityName( entity.id() )
-
-		if world.entityType(sbq.occupant[i].id) == "player" then
-			sbq.addRPC(world.sendEntityMessage(sbq.occupant[i].id, "sbqLoadSettings", smolPreyData.species), function(settings)
-				smolPreyData = sbq.getSmolPreyData(settings, smolPreyData.species, smolPreyData.state or "smol")
-				if sbq.occupant[i].species == "sbqEgg" then
-					sbq.occupant[i].smolPreyData.layer = smolPreyData
-				else
-					sbq.occupant[i].smolPreyData = smolPreyData
-					sbq.occupant[i].species = smolPreyData.species
-				end
-			end)
-		else
-			smolPreyData = sbq.getSmolPreyData(sbq.settings, smolPreyData.species, smolPreyData.state or "smol")
-			if sbq.occupant[i].species == "sbqEgg" then
-				sbq.occupant[i].smolPreyData.layer = smolPreyData
-			else
-				sbq.occupant[i].smolPreyData = smolPreyData
-				sbq.occupant[i].species = smolPreyData.species
-			end
+			sbq.doTransformPrey(i, smolPreyData.settings or {}, smolPreyData)
 		end
 	end
-	if smolPreyData.species == "sbqEgg" then
-		sbq.occupant[i].progressBar = 0
+	if sbq.occupant[i].progressBarType == "eggifying" then
 		sbq.occupant[i].egged = true
 	else
 		sbq.occupant[i].transformed = true
 	end
 	sbq.refreshList = true
+end
+
+function sbq.doTransformPrey(i, settings, smolPreyData)
+	smolPreyData = sb.jsonMerge(smolPreyData, sbq.getSmolPreyData(settings, smolPreyData.species, "smol"))
+	if sbq.occupant[i].species == "sbqEgg" then
+		sbq.occupant[i].smolPreyData.layer = smolPreyData
+	else
+		sbq.occupant[i].smolPreyData = smolPreyData
+		sbq.occupant[i].species = smolPreyData.species
+	end
 end
 
 function sbq.transformPlayer(i)
@@ -292,5 +269,41 @@ function sbq.transformPlayer(i)
 	sbq.occupant[i].transformed = true
 	if type(id) == "number" and world.entityExists(id) then
 		world.sendEntityMessage(id, "sbqMysteriousPotionTF", data )
+	end
+end
+
+function sbq.initLocationEffects()
+	for location, data in pairs(sbq.sbqData.locations) do
+		local value = sbq.settings[location.."EffectSlot"]
+		if value then
+			local effect = (data[value] or {}).effect or (sbq.sbqData.effectDefaults or {})[value] or (sbq.config.effectDefaults or {})[value] or "sbqRemoveBellyEffects"
+			sbq.settings[location.."Effect"] = effect
+			if data.sided then
+				local left =  sbq.sbqData.locations[location.."L"]
+				local right =  sbq.sbqData.locations[location.."R"]
+				if not right.selectEffect then
+					sbq.settings[location.."REffect"] = effect
+				end
+				if not left.selectEffect then
+					sbq.settings[location.."LEffect"] = effect
+				end
+			end
+		end
+		if data.sided then
+			local left =  sbq.sbqData.locations[location.."L"]
+			local right =  sbq.sbqData.locations[location.."R"]
+			if not right.TF then
+				right.TF = data.TF
+			end
+			if not left.TF then
+				left.TF = data.TF
+			end
+			if not right.eggify then
+				right.eggify = data.eggify
+			end
+			if not left.eggify then
+				left.eggify = data.eggify
+			end
+		end
 	end
 end

@@ -34,7 +34,7 @@ function sbq.setItemActionColorReplaceDirectives()
 		for j, color in ipairs(basePalette) do
 			color = replacePalette[j]
 			if fullbright and #color <= #"ffffff" then -- don't tack it on it if it already has a defined opacity or fullbright
-				color = color.."fb"
+				color = color.."fe"
 			end
 							colorReplaceString = colorReplaceString.."?replace;"..(basePalette[j] or "").."="..(color or "")
 
@@ -42,18 +42,6 @@ function sbq.setItemActionColorReplaceDirectives()
 	end
 
 	sbq.itemActionDirectives = colorReplaceString
-end
-
-function sbq.otherLocationEffects(i, eid, health, bellyEffect, location )
-	if (sbq.settings.penisCumTF and location == "shaft" and (sbq.occupant[i].progressBar <= 0))
-	or (sbq.settings.ballsCumTF and ( location == "balls" or location == "ballsR" or location == "ballsL" ) and (sbq.occupant[i].progressBar <= 0))
-	then
-		sbq.loopedMessage("CumTF"..eid, eid, "sbqIsPreyEnabled", {"transformImmunity"}, function (immune)
-			if not immune then
-				transformMessageHandler( eid , 3, sbq.config.victimTransformPresets.cumBlob )
-			end
-		end)
-	end
 end
 
 function sbq.changeSize()

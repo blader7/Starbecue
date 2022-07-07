@@ -3,7 +3,7 @@
 	"level" : 1,
 	"price" : 100,
 	"maxStack" : 1,
-	"rarity" : "common",
+	"rarity" : "uncommon",
 	"description" : "A potion that can swap your gender.",
 	"shortdescription" : "Gender Swap Potion",
 	"tooltipKind" : "tool",
@@ -13,6 +13,10 @@
 
 	"inventoryIcon" : "sbqPotion.png",
 	"largeImage" : "sbqPotionLarge.png",
+
+	"animationParts" : {
+		"potion" : "sbqPotion.png"
+	},
 
 	"animation" : "/items/active/sbqTransformation/sbqPotion.animation",
 

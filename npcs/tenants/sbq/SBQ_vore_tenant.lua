@@ -1,4 +1,5 @@
 ---@diagnostic disable: undefined-global
+---@diagnostic disable: undefined-field
 
 local oldinit = init
 local oldupdate = update
@@ -50,8 +51,20 @@ function init()
 	sbq.getSpeciesConfig()
 
 	if not storage.settings then
-		storage.settings = sb.jsonMerge( sbq.config.defaultSettings, sb.jsonMerge(sbq.speciesConfig.sbqData.defaultSettings or {}, sb.jsonMerge( config.getParameter("sbqDefaultSettings") or {}, config.getParameter("sbqSettings") or {})))
+		storage.settings = sb.jsonMerge( sbq.config.defaultSettings,
+			sb.jsonMerge(sbq.speciesConfig.sbqData.defaultSettings or {},
+				sb.jsonMerge( config.getParameter("sbqDefaultSettings") or {}, config.getParameter("sbqSettings") or {})
+			)
+		)
 	end
+	local preySettings = status.statusProperty("sbqPreyEnabled")
+	status.setStatusProperty("sbqPreyEnabled",
+		sb.jsonMerge(sbq.config.defaultPreyEnabled.player,
+			sb.jsonMerge(preySettings, config.getParameter("sbqOverridePreyEnabled") or {})
+		)
+	)
+	storage.settings = sb.jsonMerge(storage.settings or {}, config.getParameter("sbqOverrideSettings") or {})
+
 	if not storage.settings.firstLoadDone then
 		storage.settings.firstLoadDone = true
 		sbq.randomizeTenantSettings()
@@ -97,7 +110,7 @@ function init()
 	end)
 	message.setHandler("sbqSavePreySettings", function (_,_, settings)
 		status.setStatusProperty("sbqPreyEnabled", settings)
-		sbq.handleImmunities()
+		sbq.handleImmunities("player")
 	end)
 	message.setHandler("sbqSayRandomLine", function ( _,_, entity, settings, treestart, getVictimPreySettings )
 		if getVictimPreySettings then
@@ -217,7 +230,23 @@ function uninit()
 end
 
 function interact(args)
-	local dialogueBoxData = { sbqData = sbq.speciesConfig.sbqData, dialogueBoxScripts = sbq.dialogueBoxScripts, settings = storage.settings, dialogueTree = sbq.dialogueTree, icons = config.getParameter("voreIcons"), entityPortrait = config.getParameter("entityPortrait"), defaultPortrait = config.getParameter("defaultPortrait"), portraitPath = config.getParameter("portraitPath"), defaultName = config.getParameter("defaultName"), occupantHolder = sbq.occupantHolder }
+	local overrideData = status.statusProperty("speciesAnimOverrideData") or {}
+
+	local dialogueBoxData = {
+		sbqData = sbq.speciesConfig.sbqData,
+		dialogueBoxScripts = sbq.dialogueBoxScripts,
+		settings = sb.jsonMerge(storage.settings, status.statusProperty("sbqPreyEnabled") or {} ),
+		dialogueTree = sbq.dialogueTree,
+		icons = config.getParameter("voreIcons"),
+		iconDirectives = (config.getParameter("iconDirectives") or "")..(overrideData.directives or ""),
+		entityPortrait = config.getParameter("entityPortrait"),
+		defaultPortrait = config.getParameter("defaultPortrait"),
+		portraitPath = config.getParameter("portraitPath"),
+		defaultName = config.getParameter("defaultName"),
+		occupantHolder = sbq.occupantHolder
+	}
+	dialogueBoxData.settings.race = npc.species()
+
 	if sbq.currentData.type == "prey" then
 		if args.predData then
 			sbq.predData = args.predData
@@ -229,7 +258,7 @@ function interact(args)
 			settings.personality = storage.settings.personality
 			settings.mood = storage.settings.mood
 
-			dialogueBoxData.settings = sb.jsonMerge(settings,  sb.jsonMerge(sbq.config.defaultPreyEnabled.npc, status.statusProperty("sbqPreyEnabled") or {}))
+			dialogueBoxData.settings = sb.jsonMerge(dialogueBoxData.settings, settings)
 			dialogueBoxData.dialogueTreeStart = { "struggling" }
 			return {"ScriptPane", { data = dialogueBoxData, gui = { }, scripts = {"/metagui.lua"}, ui = "starbecue:dialogueBox" }}
 		else
@@ -240,6 +269,7 @@ function interact(args)
 		if location ~= nil then
 			dialogueBoxData.dialogueTreeStart = { "struggle" }
 			dialogueBoxData.settings.location = location
+			dialogueBoxData.settings.playerPrey = true
 		end
 		return {"ScriptPane", { data = dialogueBoxData, gui = { }, scripts = {"/metagui.lua"}, ui = "starbecue:dialogueBox" }}
 	end
@@ -321,7 +351,7 @@ function sbq.randomizeTenantSettings()
 		preySettings[setting] = values[math.random(#values)]
 	end
 	status.setStatusProperty("sbqPreyEnabled", preySettings)
-	sbq.handleImmunities()
+	sbq.handleImmunities("player")
 end
 
 function sbq.setRelevantPredSettings()

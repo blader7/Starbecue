@@ -263,7 +263,14 @@ function init()
 		return speciesConfig
 	end)
 
-	sbq.handleImmunities()
+	message.setHandler("sbqUnlockedSpecies", function ()
+		player.radioMessage({
+			messageId = "transformPotionUnlock", unique = false,
+			text = "Scans indicate that may have caused some lasting alterations to your DNA, future transformations into this species should be more stable. ^#555;(Head to the ^#711;Starbecue Settings^#555; menu from the ^#711;Quickbar^#555; to customize your appearance.)"
+		}, 1)
+	end)
+
+	sbq.handleImmunities("player")
 
 	initStage = 1 -- init has run
 end

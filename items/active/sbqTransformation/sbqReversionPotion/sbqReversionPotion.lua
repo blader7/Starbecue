@@ -1,6 +1,7 @@
 function init()
 	self.useTimer = nil
 	activeItem.setArmAngle(-math.pi/4)
+	animator.resetTransformationGroup("potion")
 	animator.rotateTransformationGroup("potion", math.pi/4)
 end
 
@@ -20,6 +21,7 @@ function update(dt, fireMode, shiftHeld)
 		elseif self.useTimer < 5.5 then
 			activeItem.setArmAngle(math.max(3.1/5 - (self.useTimer-3.1)*3, -math.pi/3))
 		else
+			status.setStatusProperty("oldSpeciesAnimOverrideData", {})
 			world.sendEntityMessage(entity.id(), "sbqEndMysteriousPotionTF")
 			item.consume(1)
 			animator.playSound("activate")

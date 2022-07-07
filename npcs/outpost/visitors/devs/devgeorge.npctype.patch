@@ -11,7 +11,9 @@
 			"path": "/statusControllerSettings/statusProperties/sbqPreyEnabled",
 			"value": {
 				"preyEnabled" : false,
-				"transformImmunity" : true
+				"transformImmunity" : true,
+				"cumTFImmunity" : true,
+				"genderswapImmunity" : true
 			}
 		}
 	]

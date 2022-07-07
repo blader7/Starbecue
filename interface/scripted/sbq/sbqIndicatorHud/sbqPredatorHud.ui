@@ -18,9 +18,26 @@
 
 				{ "type" : "image", "file" : "predHudBottom.png", "noAutoCrop" : true },
 
-				{ "type" : "iconButton", "id" : "prevBellyEffect", "position" : [3, 13], "image" : "/interface/pickleft.png", "hoverImage" : "/interface/pickleftover.png" },
-				{ "type" : "iconButton", "id" : "bellyEffectIcon", "image" : "/stats/sbq/sbqRemoveBellyEffects/sbqRemoveBellyEffects.png", "noAutoCrop" : true, "position" : [15,9], "size" : [16,16], "toolTip" : "None" },
-				{ "type" : "iconButton", "id" : "nextBellyEffect", "position" : [35, 13], "image" : "/interface/pickright.png", "hoverImage" : "/interface/pickrightover.png" },
+				{ "type" : "panel", "id" : "effectsPanel", "style" : "concave", "size" : [38,27], "position" : [4,4], "children" : [
+					{ "type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
+						[
+							[[{"expandMode":[2,2]}]],
+							{ "type" : "checkBox", "id" : "noneButton", "value" : "none", "radioGroup" : "effectsGroup"},
+							{ "type" : "checkBox", "id" : "healButton", "value" : "heal",  "radioGroup" : "effectsGroup"},
+							{ "type" : "checkBox", "id" : "transformButton" },
+							[[{"expandMode":[2,2]}]]
+						],
+						[
+							[[{"expandMode":[2,2]}]],
+							{ "type" : "checkBox", "id" : "softDigestButton", "value" : "softDigest", "radioGroup" : "effectsGroup"},
+							{ "type" : "checkBox", "id" : "digestButton", "value" : "digest",  "radioGroup" : "effectsGroup"},
+							{ "type" : "checkBox", "id" : "eggifyButton" },
+							[[{"expandMode":[2,2]}]]
+						]
+					]}
+				]},
+				{ "type" : "iconButton", "id" : "prevLocation", "position" : [1, 8], "image" : "/interface/scripted/sbq/sbqIndicatorHud/leftSide.png", "hoverImage" : "/interface/scripted/sbq/sbqIndicatorHud/leftSide.png?replace;000000=FFFFFF" },
+				{ "type" : "iconButton", "id" : "nextLocation", "position" : [40, 8], "image" : "/interface/scripted/sbq/sbqIndicatorHud/leftSide.png?flipx", "hoverImage" : "/interface/scripted/sbq/sbqIndicatorHud/leftSide.png?replace;000000=FFFFFF?flipx" },
 
 				{ "type" : "panel", "style" : "concave", "size" : [48,24], "position" : [45,5], "children" : [
 					{ "type" : "label", "text" : "  Escape" },
