@@ -11,6 +11,9 @@
 	Lakota Amitola
 	BRZYN-Z18
 
+# Contributors
+	Piro (for the mummy and sarcophagus vehicles for trap testing)
+
 # Builders
 	Cosmic
 

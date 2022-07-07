@@ -10,13 +10,15 @@
 
 	"tooltipKind" : "sbqSpawner",
 
-	"inventoryIcon": "/objects/sbq/sbqSpawners/sbqSpawnerSarcophagus/sbqSpawnerSarcohpagus.png",
+	"inventoryIcon": "/objects/sbq/sbqSpawners/sbqSpawnerSarcophagus/sbqSpawnerSarcohpagusicon.png",
 	"shortdescription": "Cursed Sarcophagus",
 	"description": "A Cursed Sarcophagus.",
 
 	"tooltipFields" : {
 		"statusLabel": "A Cursed Sarcophagus."
 	},
+
+	"animation" : "objects/sbq/sbqSpawners/sbqSpawnerSarcophagus/sbqSpawnerSarcophagus.animation",
 
 	"orientations": [
 		{
